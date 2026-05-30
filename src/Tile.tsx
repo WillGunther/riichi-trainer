@@ -7,30 +7,42 @@ type TileProps = {
   muted?: boolean;
 };
 
-const honorLabels: Record<string, { face: string; beginner: string; tone: string }> = {
-  E: { face: "東", beginner: "E", tone: "wind" },
-  S: { face: "南", beginner: "S", tone: "wind" },
-  W: { face: "西", beginner: "W", tone: "wind" },
-  N: { face: "北", beginner: "N", tone: "wind" },
-  P: { face: "", beginner: "White", tone: "dragon white-dragon" },
-  F: { face: "發", beginner: "Green", tone: "dragon green" },
-  C: { face: "中", beginner: "Red", tone: "dragon red" },
+const tileAssetUrls = import.meta.glob("./assets/tiles/regular/*.png", {
+  eager: true,
+  import: "default",
+  query: "?url",
+}) as Record<string, string>;
+
+const honorLabels: Record<string, { beginner: string; tone: string; file: string; alt: string }> = {
+  E: { beginner: "E", tone: "wind", file: "Ton.png", alt: "East wind" },
+  S: { beginner: "S", tone: "wind", file: "Nan.png", alt: "South wind" },
+  W: { beginner: "W", tone: "wind", file: "Shaa.png", alt: "West wind" },
+  N: { beginner: "N", tone: "wind", file: "Pei.png", alt: "North wind" },
+  P: { beginner: "White", tone: "dragon white-dragon", file: "Haku.png", alt: "White dragon" },
+  F: { beginner: "Green", tone: "dragon green", file: "Hatsu.png", alt: "Green dragon" },
+  C: { beginner: "Red", tone: "dragon red", file: "Chun.png", alt: "Red dragon" },
 };
 
 function parseTile(tile: TileCode) {
   if (honorLabels[tile]) {
-    return honorLabels[tile];
+    return {
+      ...honorLabels[tile],
+      assetUrl: tileAssetUrls[`./assets/tiles/regular/${honorLabels[tile].file}`],
+    };
   }
 
   const red = tile.endsWith("r");
   const suit = tile[1];
   const value = tile[0];
-  const suitFace = suit === "m" ? "萬" : suit === "p" ? "筒" : "索";
   const suitTone = suit === "m" ? "manzu" : suit === "p" ? "pinzu" : "souzu";
+  const suitFile = suit === "m" ? "Man" : suit === "p" ? "Pin" : "Sou";
+  const suitLabel = suit === "m" ? "man" : suit === "p" ? "pin" : "sou";
+  const file = `${suitFile}${value}${red ? "-Dora" : ""}.png`;
 
   return {
-    face: `${value}${suitFace}`,
+    assetUrl: tileAssetUrls[`./assets/tiles/regular/${file}`],
     beginner: tile,
+    alt: `${red ? "Red " : ""}${value} ${suitLabel}`,
     tone: red ? `${suitTone} red-five` : suitTone,
   };
 }
@@ -40,7 +52,7 @@ export function Tile({ tile, beginnerMode, rotated = false, muted = false }: Til
 
   return (
     <span className={`tile ${parsed.tone} ${rotated ? "rotated" : ""} ${muted ? "muted" : ""}`}>
-      <span className="tile-face">{parsed.face}</span>
+      <img className="tile-image" src={parsed.assetUrl} alt={parsed.alt} draggable="false" />
       {beginnerMode ? <span className="tile-note">{parsed.beginner}</span> : null}
     </span>
   );

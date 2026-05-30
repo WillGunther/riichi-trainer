@@ -23,7 +23,8 @@ const windTiles: Record<Wind, TileCode> = {
   north: "N",
 };
 
-const GITHUB_ISSUES_URL = "";
+const GITHUB_ISSUES_URL = "https://github.com/WillGunther/richii-trainer/issues/new";
+const TILE_SOURCE_URL = "https://github.com/FluffyStuff/riichi-mahjong-tiles";
 
 function shuffleProblemIds(previousProblemId?: string) {
   const ids = problems.map((problem) => problem.id);
@@ -40,12 +41,18 @@ function shuffleProblemIds(previousProblemId?: string) {
   return ids;
 }
 
-function getIssueUrl(problemId: string) {
-  if (!GITHUB_ISSUES_URL) return null;
-
+function getHandIssueUrl(problemId: string) {
   const params = new URLSearchParams({
     title: `Issue with hand: ${problemId}`,
     body: `Hand id: ${problemId}`,
+  });
+
+  return `${GITHUB_ISSUES_URL}?${params.toString()}`;
+}
+
+function getToolIssueUrl() {
+  const params = new URLSearchParams({
+    title: "Issue with the scoring trainer",
   });
 
   return `${GITHUB_ISSUES_URL}?${params.toString()}`;
@@ -249,18 +256,24 @@ function HandDisplay({ problem, beginnerMode }: { problem: Problem; beginnerMode
         <div className="tile-section">
           <h3>Called melds</h3>
           <div className="meld-list">
-            {hand.melds.map((meld, meldIndex) => (
-              <div className="tiles meld" key={`${meld.type}-${meldIndex}`}>
-                {meld.tiles.map((tile, tileIndex) => (
-                  <Tile
-                    key={`${tile}-${tileIndex}`}
-                    tile={tile}
-                    beginnerMode={beginnerMode}
-                    rotated={tile === meld.calledTile}
-                  />
-                ))}
-              </div>
-            ))}
+            {hand.melds.map((meld, meldIndex) => {
+              const calledTileIndex = meld.calledTile
+                ? meld.tiles.findIndex((tile) => tile === meld.calledTile)
+                : -1;
+
+              return (
+                <div className="tiles meld" key={`${meld.type}-${meldIndex}`}>
+                  {meld.tiles.map((tile, tileIndex) => (
+                    <Tile
+                      key={`${tile}-${tileIndex}`}
+                      tile={tile}
+                      beginnerMode={beginnerMode}
+                      rotated={tileIndex === calledTileIndex}
+                    />
+                  ))}
+                </div>
+              );
+            })}
           </div>
         </div>
       ) : null}
@@ -307,14 +320,12 @@ function HandDisplay({ problem, beginnerMode }: { problem: Problem; beginnerMode
           <span className="detail-label">Seat wind</span>
           <div className="wind-value">
             <Tile tile={windTiles[hand.seatWind]} beginnerMode={beginnerMode} />
-            <strong>{hand.seatWind}</strong>
           </div>
         </div>
         <div>
           <span className="detail-label">Round wind</span>
           <div className="wind-value">
             <Tile tile={windTiles[hand.roundWind]} beginnerMode={beginnerMode} />
-            <strong>{hand.roundWind}</strong>
           </div>
         </div>
         <div>
@@ -335,6 +346,7 @@ function AnswerPanel({
   problem,
   submitted,
   onSubmit,
+  onNextProblem,
 }: {
   inputs: AnswerInputs;
   setInputs: Dispatch<SetStateAction<AnswerInputs>>;
@@ -344,6 +356,7 @@ function AnswerPanel({
   problem: Problem;
   submitted: boolean;
   onSubmit: () => void;
+  onNextProblem: () => void;
 }) {
   const status = validation?.statuses;
   const updateInput = <K extends keyof AnswerInputs>(key: K, value: AnswerInputs[K]) => setInputs((current) => ({ ...current, [key]: value }));
@@ -355,6 +368,11 @@ function AnswerPanel({
           <p className="eyebrow">Your answer</p>
           <h2 id="answer-title">Score this hand</h2>
         </div>
+        {submitted ? (
+          <button className="primary-action next-action" type="button" onClick={onNextProblem}>
+            Next hand
+          </button>
+        ) : null}
       </div>
 
       <div className="answer-group">
@@ -476,7 +494,7 @@ function AnswerPanel({
 
       {submitted && validation ? (
         <p className={`result ${validation.correct ? "success" : "error"}`}>
-          {validation.correct ? "Correct." : "Some fields need review."}
+          {validation.correct ? "Correct." : "Incorrect: check the red fields."}
         </p>
       ) : null}
     </section>
@@ -544,17 +562,26 @@ function Explanation({ problem, validation }: { problem: Problem; validation: Va
 }
 
 function ReportFooter({ problemId }: { problemId: string }) {
-  const issueUrl = getIssueUrl(problemId);
-
   return (
     <footer className="app-footer">
-      {issueUrl ? (
-        <a href={issueUrl} target="_blank" rel="noreferrer">
-          Report an issue with this hand
+      <div>
+        See an issue with this hand?{" "}
+        <a href={getHandIssueUrl(problemId)} target="_blank" rel="noreferrer">
+          Report it here.
         </a>
-      ) : (
-        <span>Report an issue with this hand when GitHub issues are configured.</span>
-      )}
+      </div>
+      <div>
+        See an issue with the tool?{" "}
+        <a href={getToolIssueUrl()} target="_blank" rel="noreferrer">
+          Report it here.
+        </a>
+      </div>
+      <div>
+        Tile art from{" "}
+        <a href={TILE_SOURCE_URL} target="_blank" rel="noreferrer">
+          FluffyStuff/riichi-mahjong-tiles
+        </a>
+      </div>
     </footer>
   );
 }
@@ -646,18 +673,12 @@ export default function App() {
           problem={problem}
           submitted={submitted}
           onSubmit={submitAnswer}
+          onNextProblem={nextProblem}
         />
       </div>
 
       {submitted ? (
-        <>
-          <Explanation problem={problem} validation={selectedValidation} />
-          <div className="post-submit-actions">
-            <button className="primary-action next-action" type="button" onClick={nextProblem}>
-              Next hand
-            </button>
-          </div>
-        </>
+        <Explanation problem={problem} validation={selectedValidation} />
       ) : null}
 
       <ReportFooter problemId={problem.id} />

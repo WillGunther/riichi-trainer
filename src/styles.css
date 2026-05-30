@@ -185,72 +185,57 @@ h3 {
 
 .tile {
   align-items: center;
-  aspect-ratio: 0.72;
-  background: linear-gradient(180deg, #fffdfa, #e7e0d2);
-  border: 1px solid #c2b8a6;
-  border-radius: 6px;
-  box-shadow:
-    inset 0 0 0 2px #fffaf0,
-    0 2px 4px rgba(40, 36, 30, 0.15);
+  aspect-ratio: 3 / 4;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(40, 36, 30, 0.12);
   display: inline-flex;
   flex-direction: column;
+  inline-size: 42px;
   justify-content: center;
-  min-width: 42px;
-  padding: 5px;
+  padding: 0;
   position: relative;
+  vertical-align: middle;
 }
 
 .compact .tile {
-  min-width: 34px;
+  inline-size: 34px;
 }
 
 .tile.rotated {
   transform: rotate(90deg);
+  transform-origin: center;
 }
 
 .tile.muted {
-  background: #f4f0e8;
+  opacity: 0.72;
 }
 
-.tile-face {
-  font-size: 1rem;
-  font-weight: 900;
-  line-height: 1;
-  min-height: 1rem;
+.tile-image {
+  block-size: 100%;
+  display: block;
+  inline-size: 100%;
+  object-fit: contain;
+  user-select: none;
 }
 
 .tile-note {
-  color: #47514a;
-  font-size: 0.62rem;
+  background: rgba(255, 253, 248, 0.86);
+  border: 1px solid rgba(105, 94, 77, 0.28);
+  border-radius: 999px;
+  color: #39433c;
+  font-size: 0.48rem;
   font-weight: 800;
   line-height: 1;
-  margin-top: 4px;
-}
-
-.manzu .tile-face,
-.dragon.red .tile-face,
-.red-five .tile-face {
-  color: #b13a31;
-}
-
-.pinzu .tile-face {
-  color: #2c6f8f;
-}
-
-.souzu .tile-face,
-.dragon.green .tile-face {
-  color: #287952;
-}
-
-.wind .tile-face {
-  color: #2c3030;
-}
-
-.white-dragon {
-  box-shadow:
-    inset 0 0 0 2px #fffaf0,
-    inset 0 0 0 5px #d8cfc0,
-    0 2px 4px rgba(40, 36, 30, 0.15);
+  max-inline-size: calc(100% - 2px);
+  overflow: hidden;
+  padding: 1px 2px;
+  position: absolute;
+  right: -1px;
+  text-overflow: ellipsis;
+  top: 2px;
+  white-space: nowrap;
 }
 
 .hand-details {
@@ -655,20 +640,18 @@ h3 {
   padding: 12px;
 }
 
-.post-submit-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 14px;
-}
-
 .next-action {
+  min-height: 40px;
   max-width: 220px;
+  padding-inline: 18px;
 }
 
 .app-footer {
   border-top: 1px solid #d8d0c2;
   color: #647067;
+  display: grid;
   font-size: 0.86rem;
+  gap: 6px;
   margin-top: 24px;
   padding: 18px 0 0;
   text-align: center;
