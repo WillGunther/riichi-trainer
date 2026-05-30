@@ -13,14 +13,14 @@ const tileAssetUrls = import.meta.glob("./assets/tiles/regular/*.png", {
   query: "?url",
 }) as Record<string, string>;
 
-const honorLabels: Record<string, { beginner: string; tone: string; file: string; alt: string }> = {
+const honorLabels: Record<string, { beginner?: string; tone: string; file: string; alt: string }> = {
   E: { beginner: "E", tone: "wind", file: "Ton.png", alt: "East wind" },
   S: { beginner: "S", tone: "wind", file: "Nan.png", alt: "South wind" },
   W: { beginner: "W", tone: "wind", file: "Shaa.png", alt: "West wind" },
   N: { beginner: "N", tone: "wind", file: "Pei.png", alt: "North wind" },
-  P: { beginner: "White", tone: "dragon white-dragon", file: "Haku.png", alt: "White dragon" },
-  F: { beginner: "Green", tone: "dragon green", file: "Hatsu.png", alt: "Green dragon" },
-  C: { beginner: "Red", tone: "dragon red", file: "Chun.png", alt: "Red dragon" },
+  P: { tone: "dragon white-dragon", file: "Haku.png", alt: "White dragon" },
+  F: { tone: "dragon green", file: "Hatsu.png", alt: "Green dragon" },
+  C: { tone: "dragon red", file: "Chun.png", alt: "Red dragon" },
 };
 
 function parseTile(tile: TileCode) {
@@ -41,7 +41,7 @@ function parseTile(tile: TileCode) {
 
   return {
     assetUrl: tileAssetUrls[`./assets/tiles/regular/${file}`],
-    beginner: tile,
+    beginner: value,
     alt: `${red ? "Red " : ""}${value} ${suitLabel}`,
     tone: red ? `${suitTone} red-five` : suitTone,
   };
@@ -53,7 +53,7 @@ export function Tile({ tile, beginnerMode, rotated = false, muted = false }: Til
   return (
     <span className={`tile ${parsed.tone} ${rotated ? "rotated" : ""} ${muted ? "muted" : ""}`}>
       <img className="tile-image" src={parsed.assetUrl} alt={parsed.alt} draggable="false" />
-      {beginnerMode ? <span className="tile-note">{parsed.beginner}</span> : null}
+      {beginnerMode && parsed.beginner ? <span className="tile-note">{parsed.beginner}</span> : null}
     </span>
   );
 }

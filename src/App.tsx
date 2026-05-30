@@ -25,6 +25,57 @@ const windTiles: Record<Wind, TileCode> = {
 
 const GITHUB_ISSUES_URL = "https://github.com/WillGunther/richii-trainer/issues/new";
 const TILE_SOURCE_URL = "https://github.com/FluffyStuff/riichi-mahjong-tiles";
+const pointChartHanColumns = [1, 2, 3, 4] as const;
+const pointChartFuRows = [20, 25, 30, 40, 50, 60, 70] as const;
+
+const limitPointRows = [
+  { tier: "mangan", label: "Mangan", basePoints: 2000 },
+  { tier: "haneman", label: "Haneman", basePoints: 3000 },
+  { tier: "baiman", label: "Baiman", basePoints: 4000 },
+  { tier: "sanbaiman", label: "Sanbaiman", basePoints: 6000 },
+  { tier: "yakuman", label: "Yakuman", basePoints: 8000 },
+] as const;
+
+function formatPointValue(value: number) {
+  return value.toLocaleString("en-US");
+}
+
+function roundUpToHundred(value: number) {
+  return Math.ceil(value / 100) * 100;
+}
+
+function getBasePoints(han: number, fu: number) {
+  const raw = fu * 2 ** (han + 2);
+
+  if (han >= 13) return 8000;
+  if (han >= 11) return 6000;
+  if (han >= 8) return 4000;
+  if (han >= 6) return 3000;
+  if (han >= 5 || raw >= 2000) return 2000;
+
+  return raw;
+}
+
+function getChartCell(han: number, fu: number, dealer: boolean) {
+  const basePoints = getBasePoints(han, fu);
+  const limitLabel = basePoints >= 2000 ? "Mangan" : null;
+
+  if (dealer) {
+    return {
+      label: limitLabel,
+      ron: formatPointValue(roundUpToHundred(basePoints * 6)),
+      tsumo: formatPointValue(roundUpToHundred(basePoints * 2)),
+      tsumoSuffix: "all",
+    };
+  }
+
+  return {
+      label: limitLabel,
+      ron: formatPointValue(roundUpToHundred(basePoints * 4)),
+      tsumo: `${formatPointValue(roundUpToHundred(basePoints))} / ${formatPointValue(roundUpToHundred(basePoints * 2))}`,
+      tsumoSuffix: undefined,
+  };
+}
 
 function shuffleProblemIds(previousProblemId?: string) {
   const ids = problems.map((problem) => problem.id);
@@ -80,7 +131,19 @@ function FieldShell({
   );
 }
 
-function FloatingInfo({ label, children }: { label: string; children: ReactNode }) {
+function FloatingInfo({
+  label,
+  children,
+  wide = false,
+  side = "top",
+  align = "center",
+}: {
+  label: string;
+  children: ReactNode;
+  wide?: boolean;
+  side?: "top" | "right" | "bottom" | "left";
+  align?: "start" | "center" | "end";
+}) {
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
@@ -89,7 +152,13 @@ function FloatingInfo({ label, children }: { label: string; children: ReactNode 
         </button>
       </Popover.Trigger>
       <Popover.Portal>
-        <Popover.Content className="floating-popover info-popover" sideOffset={8} collisionPadding={12}>
+        <Popover.Content
+          className={`floating-popover info-popover ${wide ? "wide-popover" : ""}`}
+          align={align}
+          side={side}
+          sideOffset={8}
+          collisionPadding={12}
+        >
           <Popover.Close className="popover-close" aria-label="Close">
             <X size={15} strokeWidth={2.5} />
           </Popover.Close>
@@ -97,6 +166,115 @@ function FloatingInfo({ label, children }: { label: string; children: ReactNode 
         </Popover.Content>
       </Popover.Portal>
     </Popover.Root>
+  );
+}
+
+function PointsReference() {
+  return (
+    <div className="points-reference">
+      <p className="points-reference-note">Cells show ron first and tsumo in parentheses. Non-dealer tsumo is point from (non-dealer / dealer).</p>
+
+      <table className="points-chart-table">
+        <colgroup>
+          <col className="points-side-col" />
+          <col className="points-side-col" />
+          <col className="points-side-col" />
+          <col className="points-side-col" />
+          <col className="points-fu-col" />
+          <col className="points-side-col" />
+          <col className="points-side-col" />
+          <col className="points-side-col" />
+          <col className="points-side-col" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th className="span-header" scope="col" colSpan={4}>
+              Dealer
+            </th>
+            <th className="fu-spacer" scope="col" rowSpan={2} aria-label="Fu" />
+            <th className="span-header" scope="col" colSpan={4}>
+              Non-dealer
+            </th>
+          </tr>
+          <tr>
+            {pointChartHanColumns
+              .slice()
+              .reverse()
+              .map((han) => (
+                <th scope="col" key={`dealer-${han}`}>
+                  {han} han
+                </th>
+              ))}
+            {pointChartHanColumns.map((han) => (
+              <th scope="col" key={`non-dealer-${han}`}>
+                {han} han
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {pointChartFuRows.map((fu) => (
+            <tr key={fu}>
+              {pointChartHanColumns
+                .slice()
+                .reverse()
+                .map((han) => {
+                  const cell = getChartCell(han, fu, true);
+
+                  return (
+                    <td key={`${fu}-dealer-${han}`}>
+                      <span className="points-main">{cell.label ?? cell.ron}</span>
+                      <span className="points-sub">
+                        ({cell.tsumo}) {cell.tsumoSuffix ?? ""}
+                      </span>
+                    </td>
+                  );
+                })}
+              <th scope="row" className="fu-cell">
+                {fu} fu
+              </th>
+              {pointChartHanColumns.map((han) => {
+                const cell = getChartCell(han, fu, false);
+
+                return (
+                  <td key={`${fu}-non-dealer-${han}`}>
+                    <span className="points-main">{cell.label ?? cell.ron}</span>
+                    <span className="points-sub points-sub-inline">({cell.tsumo})</span>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <table className="points-limit-table">
+        <thead>
+          <tr>
+            <th scope="col">Tier</th>
+            <th scope="col">Dealer</th>
+            <th scope="col">Non-dealer</th>
+          </tr>
+        </thead>
+        <tbody>
+          {limitPointRows.map((row) => (
+            <tr key={row.tier}>
+              <th scope="row">{row.label}</th>
+              <td>
+                <span className="points-main">{formatPointValue(roundUpToHundred(row.basePoints * 6))}</span>
+                <span className="points-sub">({formatPointValue(roundUpToHundred(row.basePoints * 2))} all)</span>
+              </td>
+              <td>
+                <span className="points-main">{formatPointValue(roundUpToHundred(row.basePoints * 4))}</span>
+                <span className="points-sub">
+                  ({formatPointValue(roundUpToHundred(row.basePoints))} / {formatPointValue(roundUpToHundred(row.basePoints * 2))})
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
@@ -467,7 +645,15 @@ function AnswerPanel({
               ) : null}
             </>
           ) : (
-            <FieldShell label="Points" status={status?.points ?? "idle"}>
+            <FieldShell
+              label="Points"
+              status={status?.points ?? "idle"}
+              action={
+                <FloatingInfo label="Show point values" wide align="center" side="top">
+                  <PointsReference />
+                </FloatingInfo>
+              }
+            >
               <input value={inputs.points} disabled={!enabled.points} onChange={(event) => updateInput("points", event.target.value)} />
             </FieldShell>
           )}

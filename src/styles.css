@@ -190,17 +190,19 @@ h3 {
   border: 0;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(40, 36, 30, 0.12);
+  box-sizing: border-box;
   display: inline-flex;
   flex-direction: column;
   inline-size: 42px;
   justify-content: center;
-  padding: 0;
+  padding-inline: 6px;
   position: relative;
   vertical-align: middle;
 }
 
 .compact .tile {
   inline-size: 34px;
+  padding-inline: 4px;
 }
 
 .tile.rotated {
@@ -380,6 +382,17 @@ h3 {
   padding-right: 42px;
 }
 
+.wide-popover {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  max-height: min(78vh, 760px);
+  max-width: min(760px, calc(100vw - 24px));
+  overflow: auto;
+  transform: translate(-50%, -50%);
+  width: min(760px, calc(100vw - 24px));
+}
+
 .popover-copy {
   display: grid;
   gap: 12px;
@@ -389,6 +402,117 @@ h3 {
   font-size: 0.88rem;
   font-weight: 700;
   line-height: 1.35;
+}
+
+.points-reference {
+  display: grid;
+  gap: 14px;
+}
+
+.points-reference-note {
+  color: #5b5a49;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.points-chart-table,
+.points-limit-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.points-chart-table th,
+.points-chart-table td,
+.points-limit-table th,
+.points-limit-table td {
+  border: 1px solid #e1d4a9;
+  padding: 5px 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.points-chart-table {
+  table-layout: fixed;
+}
+
+.points-chart-table .points-side-col {
+  width: calc((100% - 72px) / 8);
+}
+
+.points-chart-table .points-fu-col {
+  width: 72px;
+}
+
+.points-chart-table thead th,
+.points-limit-table thead th {
+  background: #f3e8bf;
+  color: #4d4937;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.points-chart-table thead .span-header {
+  font-size: 0.72rem;
+}
+
+.points-chart-table .fu-spacer {
+  background: #f3e8bf;
+  width: 72px;
+}
+
+.points-chart-table tbody th,
+.points-limit-table tbody th {
+  background: #fff4cf;
+  color: #4b4534;
+  font-size: 0.73rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.points-chart-table td,
+.points-limit-table td {
+  background: #fffdf6;
+  min-width: 0;
+}
+
+.points-main,
+.points-sub {
+  display: block;
+  line-height: 1.15;
+}
+
+.points-main {
+  color: #293126;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.points-sub {
+  color: #655f4d;
+  font-size: 0.66rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.points-sub-inline {
+  display: inline;
+  margin-top: 0;
+  font-size: 0.58rem;
+  white-space: nowrap;
+}
+
+.points-limit-table td {
+  text-align: left;
+}
+
+.points-limit-table td .points-main,
+.points-limit-table td .points-sub {
+  text-align: left;
+}
+
+.points-main-label {
+  font-size: 0.78rem;
 }
 
 .tile-order {
@@ -714,4 +838,5 @@ h3 {
   .breakdown-list em {
     grid-column: 2;
   }
+
 }
