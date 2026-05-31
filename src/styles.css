@@ -183,6 +183,14 @@ h3 {
   gap: 12px;
 }
 
+.concealed-kan-list {
+  margin-top: 8px;
+}
+
+.concealed-kan {
+  opacity: 0.94;
+}
+
 .tile {
   align-items: center;
   aspect-ratio: 3 / 4;
@@ -212,6 +220,14 @@ h3 {
 
 .tile.muted {
   opacity: 0.72;
+}
+
+.tile.face-down {
+  background: linear-gradient(180deg, #fffdf8 0%, #efe6d5 100%);
+  border: 1px solid #d6c6aa;
+  box-shadow:
+    inset 0 0 0 3px #f7f0e1,
+    0 2px 4px rgba(40, 36, 30, 0.12);
 }
 
 .tile-image {
@@ -488,6 +504,10 @@ h3 {
   font-weight: 800;
 }
 
+.points-main.unavailable {
+  color: #9a9485;
+}
+
 .points-sub {
   color: #655f4d;
   font-size: 0.66rem;
@@ -762,6 +782,16 @@ h3 {
   font-weight: 700;
   margin-top: 14px;
   padding: 12px;
+}
+
+.problem-hash {
+  color: #8a9088;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 12px;
+  text-align: right;
 }
 
 .next-action {

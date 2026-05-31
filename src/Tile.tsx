@@ -5,6 +5,7 @@ type TileProps = {
   beginnerMode: boolean;
   rotated?: boolean;
   muted?: boolean;
+  faceDown?: boolean;
 };
 
 const tileAssetUrls = import.meta.glob("./assets/tiles/regular/*.png", {
@@ -47,7 +48,11 @@ function parseTile(tile: TileCode) {
   };
 }
 
-export function Tile({ tile, beginnerMode, rotated = false, muted = false }: TileProps) {
+export function Tile({ tile, beginnerMode, rotated = false, muted = false, faceDown = false }: TileProps) {
+  if (faceDown) {
+    return <span className={`tile face-down ${rotated ? "rotated" : ""} ${muted ? "muted" : ""}`} aria-label="Face-down tile" />;
+  }
+
   const parsed = parseTile(tile);
 
   return (

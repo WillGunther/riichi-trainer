@@ -3,3 +3,16 @@ dist/
 .env
 .env.local
 .DS_Store
+__pycache__/
+*.pyc
+uv.lock
+*.db
+*.sqlite
+*.sqlite3
+*.mjlog
+*.mjlog.gz
+houou-logs/
+tenhou-logs/
+tenhou-xml/
+scraw*.zip
+logs/

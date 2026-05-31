@@ -29,11 +29,11 @@ const pointChartHanColumns = [1, 2, 3, 4] as const;
 const pointChartFuRows = [20, 25, 30, 40, 50, 60, 70] as const;
 
 const limitPointRows = [
-  { tier: "mangan", label: "Mangan", basePoints: 2000 },
-  { tier: "haneman", label: "Haneman", basePoints: 3000 },
-  { tier: "baiman", label: "Baiman", basePoints: 4000 },
-  { tier: "sanbaiman", label: "Sanbaiman", basePoints: 6000 },
-  { tier: "yakuman", label: "Yakuman", basePoints: 8000 },
+  { tier: "mangan", label: "Mangan", han: "5 han", basePoints: 2000 },
+  { tier: "haneman", label: "Haneman", han: "6-7 han", basePoints: 3000 },
+  { tier: "baiman", label: "Baiman", han: "8-10 han", basePoints: 4000 },
+  { tier: "sanbaiman", label: "Sanbaiman", han: "11-12 han", basePoints: 6000 },
+  { tier: "yakuman", label: "Yakuman", han: "13+ han", basePoints: 8000 },
 ] as const;
 
 function formatPointValue(value: number) {
@@ -57,6 +57,10 @@ function getBasePoints(han: number, fu: number) {
 }
 
 function getChartCell(han: number, fu: number, dealer: boolean) {
+  if (han === 1 && (fu === 20 || fu === 25)) {
+    return null;
+  }
+
   const basePoints = getBasePoints(han, fu);
   const limitLabel = basePoints >= 2000 ? "Mangan" : null;
 
@@ -135,17 +139,19 @@ function FloatingInfo({
   label,
   children,
   wide = false,
+  stayOpenOnInteract = false,
   side = "top",
   align = "center",
 }: {
   label: string;
   children: ReactNode;
   wide?: boolean;
+  stayOpenOnInteract?: boolean;
   side?: "top" | "right" | "bottom" | "left";
   align?: "start" | "center" | "end";
 }) {
   return (
-    <Popover.Root>
+    <Popover.Root modal={false}>
       <Popover.Trigger asChild>
         <button className="inline-info-toggle" type="button" aria-label={label}>
           <Info size={13} strokeWidth={2.5} />
@@ -158,6 +164,7 @@ function FloatingInfo({
           side={side}
           sideOffset={8}
           collisionPadding={12}
+          onInteractOutside={stayOpenOnInteract ? (event) => event.preventDefault() : undefined}
         >
           <Popover.Close className="popover-close" aria-label="Close">
             <X size={15} strokeWidth={2.5} />
@@ -223,10 +230,16 @@ function PointsReference() {
 
                   return (
                     <td key={`${fu}-dealer-${han}`}>
-                      <span className="points-main">{cell.label ?? cell.ron}</span>
-                      <span className="points-sub">
-                        ({cell.tsumo}) {cell.tsumoSuffix ?? ""}
-                      </span>
+                      {cell ? (
+                        <>
+                          <span className="points-main">{cell.label ?? cell.ron}</span>
+                          <span className="points-sub">
+                            ({cell.tsumo}) {cell.tsumoSuffix ?? ""}
+                          </span>
+                        </>
+                      ) : (
+                        <span className="points-main unavailable">-</span>
+                      )}
                     </td>
                   );
                 })}
@@ -238,8 +251,14 @@ function PointsReference() {
 
                 return (
                   <td key={`${fu}-non-dealer-${han}`}>
-                    <span className="points-main">{cell.label ?? cell.ron}</span>
-                    <span className="points-sub points-sub-inline">({cell.tsumo})</span>
+                    {cell ? (
+                      <>
+                        <span className="points-main">{cell.label ?? cell.ron}</span>
+                        <span className="points-sub points-sub-inline">({cell.tsumo})</span>
+                      </>
+                    ) : (
+                      <span className="points-main unavailable">-</span>
+                    )}
                   </td>
                 );
               })}
@@ -252,6 +271,7 @@ function PointsReference() {
         <thead>
           <tr>
             <th scope="col">Tier</th>
+            <th scope="col">Han</th>
             <th scope="col">Dealer</th>
             <th scope="col">Non-dealer</th>
           </tr>
@@ -260,6 +280,7 @@ function PointsReference() {
           {limitPointRows.map((row) => (
             <tr key={row.tier}>
               <th scope="row">{row.label}</th>
+              <td>{row.han}</td>
               <td>
                 <span className="points-main">{formatPointValue(roundUpToHundred(row.basePoints * 6))}</span>
                 <span className="points-sub">({formatPointValue(roundUpToHundred(row.basePoints * 2))} all)</span>
@@ -411,6 +432,8 @@ function NumberInput({
 
 function HandDisplay({ problem, beginnerMode }: { problem: Problem; beginnerMode: boolean }) {
   const hand = problem.hand;
+  const concealedKanMelds = hand.melds.filter((meld) => meld.type === "kan" && !meld.open);
+  const calledMelds = hand.melds.filter((meld) => meld.open);
 
   return (
     <section className="panel hand-panel" aria-labelledby="hand-title">
@@ -428,13 +451,24 @@ function HandDisplay({ problem, beginnerMode }: { problem: Problem; beginnerMode
             <Tile key={`${tile}-${index}`} tile={tile} beginnerMode={beginnerMode} />
           ))}
         </div>
+        {concealedKanMelds.length > 0 ? (
+          <div className="meld-list concealed-kan-list">
+            {concealedKanMelds.map((meld, meldIndex) => (
+              <div className="tiles meld concealed-kan" key={`concealed-kan-${meldIndex}`}>
+                {meld.tiles.map((tile, tileIndex) => (
+                  <Tile key={`${tile}-${tileIndex}`} tile={tile} beginnerMode={beginnerMode} faceDown={tileIndex === 0 || tileIndex === 3} />
+                ))}
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
 
-      {hand.melds.length > 0 ? (
+      {calledMelds.length > 0 ? (
         <div className="tile-section">
           <h3>Called melds</h3>
           <div className="meld-list">
-            {hand.melds.map((meld, meldIndex) => {
+            {calledMelds.map((meld, meldIndex) => {
               const calledTileIndex = meld.calledTile
                 ? meld.tiles.findIndex((tile) => tile === meld.calledTile)
                 : -1;
@@ -546,11 +580,9 @@ function AnswerPanel({
           <p className="eyebrow">Your answer</p>
           <h2 id="answer-title">Score this hand</h2>
         </div>
-        {submitted ? (
-          <button className="primary-action next-action" type="button" onClick={onNextProblem}>
-            Next hand
-          </button>
-        ) : null}
+        <button className="primary-action next-action" type="button" onClick={onNextProblem}>
+          Next hand
+        </button>
       </div>
 
       <div className="answer-group">
@@ -583,10 +615,10 @@ function AnswerPanel({
               <FieldShell label="Group fu" status={status?.groupFu ?? "idle"}>
                 <NumberInput value={inputs.groupFu} disabled={!enabled.fu} onChange={(value) => updateInput("groupFu", value)} />
               </FieldShell>
-              <FieldShell label="Wait fu" status={status?.waitFu ?? "idle"}>
+              <FieldShell label="Wait/pair fu" status={status?.waitFu ?? "idle"}>
                 <NumberInput value={inputs.waitFu} disabled={!enabled.fu} onChange={(value) => updateInput("waitFu", value)} />
               </FieldShell>
-              <FieldShell label="Hand fu" status={status?.handFu ?? "idle"}>
+              <FieldShell label="Win method fu" status={status?.handFu ?? "idle"}>
                 <NumberInput value={inputs.handFu} disabled={!enabled.fu} onChange={(value) => updateInput("handFu", value)} />
               </FieldShell>
               <FieldShell
@@ -607,7 +639,12 @@ function AnswerPanel({
       </div>
 
       <div className="answer-group">
-        <h3>Score</h3>
+        <h3>
+          Score
+          <FloatingInfo label="Show point values" wide align="center" side="top" stayOpenOnInteract>
+            <PointsReference />
+          </FloatingInfo>
+        </h3>
         <div className="answer-grid">
           <BinaryField
             label="Dealer"
@@ -627,7 +664,7 @@ function AnswerPanel({
 
           {inputs.tsumo ? (
             <>
-              <FieldShell label={inputs.dealer ? "Non-dealers pay" : "Non-dealer pays"} status={status?.tsumoChildPoints ?? "idle"}>
+              <FieldShell label={inputs.dealer ? "Points from all" : "Non-dealer pays"} status={status?.tsumoChildPoints ?? "idle"}>
                 <input
                   value={inputs.tsumoChildPoints}
                   disabled={!enabled.points}
@@ -645,15 +682,7 @@ function AnswerPanel({
               ) : null}
             </>
           ) : (
-            <FieldShell
-              label="Points"
-              status={status?.points ?? "idle"}
-              action={
-                <FloatingInfo label="Show point values" wide align="center" side="top">
-                  <PointsReference />
-                </FloatingInfo>
-              }
-            >
+            <FieldShell label="Points" status={status?.points ?? "idle"}>
               <input value={inputs.points} disabled={!enabled.points} onChange={(event) => updateInput("points", event.target.value)} />
             </FieldShell>
           )}
@@ -691,6 +720,7 @@ function Explanation({ problem, validation }: { problem: Problem; validation: Va
   const answer = problem.answer;
   const totals = validation?.expectedFuTotals ?? getFuTotals(answer);
   const limitText = answer.limitTier === "none" ? "No limit tier" : limitTierLabels[answer.limitTier];
+  const problemHash = problem.id.replace(/^tenhou-houou-/, "");
 
   return (
     <section className="panel explanation" aria-labelledby="explanation-title">
@@ -743,6 +773,10 @@ function Explanation({ problem, validation }: { problem: Problem; validation: Va
           This hand uses the {limitTierLabels[answer.limitTier]} shortcut, so the final points come from the limit tier. Fu can still be useful for learning, but it does not change this score.
         </p>
       ) : null}
+
+      <p className="problem-hash" aria-label={`Problem hash ${problemHash}`}>
+        {problemHash}
+      </p>
     </section>
   );
 }
@@ -776,7 +810,7 @@ export default function App() {
   const initialQueue = useMemo(() => shuffleProblemIds(), []);
   const [currentProblemId, setCurrentProblemId] = useState(initialQueue[0] ?? problems[0]?.id ?? "");
   const [handQueue, setHandQueue] = useState(initialQueue.slice(1));
-  const [beginnerMode, setBeginnerMode] = useState(true);
+  const [beginnerMode, setBeginnerMode] = useState(false);
   const [fuInputMode, setFuInputMode] = useState<FuInputMode>("total");
   const [inputs, setInputs] = useState<AnswerInputs>(getEmptyInputs);
   const [enabled, setEnabled] = useState<EnabledInputs>({
@@ -790,7 +824,7 @@ export default function App() {
   const [validation, setValidation] = useState<ValidationResult | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [sessionCounted, setSessionCounted] = useState(false);
-  const [session, setSession] = useState({ correct: 0, incorrect: 0 });
+  const [session, setSession] = useState({ correct: 0, incorrect: 0, skipped: 0 });
 
   const problem = problems.find((candidate) => candidate.id === currentProblemId) ?? problems[0];
 
@@ -805,6 +839,7 @@ export default function App() {
     setSubmitted(true);
     if (!sessionCounted) {
       setSession((current) => ({
+        ...current,
         correct: current.correct + (result.correct ? 1 : 0),
         incorrect: current.incorrect + (result.correct ? 0 : 1),
       }));
@@ -813,6 +848,13 @@ export default function App() {
   }
 
   function nextProblem() {
+    if (!submitted && !sessionCounted) {
+      setSession((current) => ({
+        ...current,
+        skipped: current.skipped + 1,
+      }));
+    }
+
     const nextQueue = handQueue.length > 0 ? handQueue : shuffleProblemIds(problem.id);
     const [nextProblemId, ...remainingQueue] = nextQueue;
 
@@ -835,7 +877,8 @@ export default function App() {
           <div className="session-stats" aria-label="Session score">
             <span>Correct <strong>{session.correct}</strong></span>
             <span>Incorrect <strong>{session.incorrect}</strong></span>
-            <button type="button" onClick={() => setSession({ correct: 0, incorrect: 0 })}>Reset</button>
+            <span>Skipped <strong>{session.skipped}</strong></span>
+            <button type="button" onClick={() => setSession({ correct: 0, incorrect: 0, skipped: 0 })}>Reset</button>
           </div>
           <SettingsMenu
             beginnerMode={beginnerMode}

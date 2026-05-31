@@ -1,0 +1,2385 @@
+[
+  {
+    "id": "tenhou-houou-8733f24af280",
+    "title": "Tenhou Houou hand 1",
+    "tags": [
+      "closed",
+      "dealer",
+      "fu=20",
+      "han=4",
+      "limit=none",
+      "menzen tsumo",
+      "pinfu",
+      "riichi",
+      "tanyao",
+      "tsumo"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "5m",
+        "5m",
+        "6m",
+        "7m",
+        "8m",
+        "3p",
+        "4p",
+        "6p",
+        "7p",
+        "8p",
+        "3s",
+        "4s",
+        "5s"
+      ],
+      "melds": [],
+      "winningTile": "2p",
+      "seatWind": "east",
+      "roundWind": "south",
+      "winMethod": "tsumo",
+      "riichi": true,
+      "doraIndicators": [
+        "W"
+      ],
+      "uraDoraIndicators": [
+        "S"
+      ]
+    },
+    "answer": {
+      "han": 4,
+      "fu": 20,
+      "points": "2600 all",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Pinfu",
+          "han": 1
+        },
+        {
+          "name": "Tanyao",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-bcd938c66e32",
+    "title": "Tenhou Houou hand 2",
+    "tags": [
+      "dora-heavy",
+      "fu=30",
+      "han=3",
+      "limit=none",
+      "non-dealer",
+      "open",
+      "ron",
+      "triplet/kan fu",
+      "yakuhai"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "3m",
+        "4m",
+        "5m",
+        "7p",
+        "7p",
+        "4s",
+        "5s"
+      ],
+      "melds": [
+        {
+          "type": "chi",
+          "tiles": [
+            "2p",
+            "3p",
+            "4p"
+          ],
+          "open": true,
+          "calledTile": "3p"
+        },
+        {
+          "type": "pon",
+          "tiles": [
+            "C",
+            "C",
+            "C"
+          ],
+          "open": true,
+          "calledTile": "C"
+        }
+      ],
+      "winningTile": "3s",
+      "seatWind": "north",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "6p"
+      ]
+    },
+    "answer": {
+      "han": 3,
+      "fu": 30,
+      "points": "3900",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Yakuhai (chun)",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-2c4a682fc4ba",
+    "title": "Tenhou Houou hand 3",
+    "tags": [
+      "chiitoitsu",
+      "closed",
+      "fixed fu",
+      "fu=25",
+      "han=2",
+      "limit=none",
+      "non-dealer",
+      "ron"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "1m",
+        "2m",
+        "2m",
+        "4m",
+        "4m",
+        "8m",
+        "8m",
+        "2s",
+        "2s",
+        "W",
+        "W",
+        "P",
+        "P"
+      ],
+      "melds": [],
+      "winningTile": "1m",
+      "seatWind": "south",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "8m"
+      ]
+    },
+    "answer": {
+      "han": 2,
+      "fu": 25,
+      "points": "1600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Chiitoitsu",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 25,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-701d2fba6395",
+    "title": "Tenhou Houou hand 4",
+    "tags": [
+      "flush/half-flush",
+      "fu=50",
+      "fu=50+",
+      "han=limit",
+      "limit=baiman",
+      "non-dealer",
+      "open",
+      "ron",
+      "triplet-style",
+      "triplet/kan fu",
+      "wait fu",
+      "yakuhai"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "E",
+        "E",
+        "E",
+        "S"
+      ],
+      "melds": [
+        {
+          "type": "pon",
+          "tiles": [
+            "W",
+            "W",
+            "W"
+          ],
+          "open": true,
+          "calledTile": "W"
+        },
+        {
+          "type": "pon",
+          "tiles": [
+            "9p",
+            "9p",
+            "9p"
+          ],
+          "open": true,
+          "calledTile": "9p"
+        },
+        {
+          "type": "pon",
+          "tiles": [
+            "1p",
+            "1p",
+            "1p"
+          ],
+          "open": true,
+          "calledTile": "1p"
+        }
+      ],
+      "winningTile": "S",
+      "seatWind": "west",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "6s"
+      ]
+    },
+    "answer": {
+      "han": 8,
+      "fu": 50,
+      "points": "16000",
+      "limitTier": "baiman",
+      "yaku": [
+        {
+          "name": "Yakuhai (seat wind west)",
+          "han": 1
+        },
+        {
+          "name": "Yakuhai (round wind east)",
+          "han": 1
+        },
+        {
+          "name": "Honroutou",
+          "han": 2
+        },
+        {
+          "name": "Toitoi",
+          "han": 2
+        },
+        {
+          "name": "Honitsu",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Pair wait",
+          "fu": 2,
+          "category": "wait"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-d050f050d492",
+    "title": "Tenhou Houou hand 5",
+    "tags": [
+      "fu=40",
+      "han=1",
+      "limit=none",
+      "non-dealer",
+      "open",
+      "ron",
+      "triplet/kan fu",
+      "yakuhai"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "7m",
+        "8m",
+        "9m",
+        "3s",
+        "4s",
+        "6s",
+        "6s",
+        "C",
+        "C",
+        "C"
+      ],
+      "melds": [
+        {
+          "type": "pon",
+          "tiles": [
+            "W",
+            "W",
+            "W"
+          ],
+          "open": true,
+          "calledTile": "W"
+        }
+      ],
+      "winningTile": "2s",
+      "seatWind": "north",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "4s"
+      ]
+    },
+    "answer": {
+      "han": 1,
+      "fu": 40,
+      "points": "1300",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Yakuhai (chun)",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-f4995cc50256",
+    "title": "Tenhou Houou hand 6",
+    "tags": [
+      "fu=40",
+      "han=3",
+      "limit=none",
+      "non-dealer",
+      "open",
+      "ron",
+      "triplet-style",
+      "triplet/kan fu",
+      "yakuhai"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "2p",
+        "2p",
+        "5p",
+        "5p",
+        "4s",
+        "4s",
+        "4s",
+        "6s",
+        "6s",
+        "6s"
+      ],
+      "melds": [
+        {
+          "type": "pon",
+          "tiles": [
+            "C",
+            "C",
+            "C"
+          ],
+          "open": true,
+          "calledTile": "C"
+        }
+      ],
+      "winningTile": "2p",
+      "seatWind": "north",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "E"
+      ]
+    },
+    "answer": {
+      "han": 3,
+      "fu": 40,
+      "points": "5200",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Yakuhai (chun)",
+          "han": 1
+        },
+        {
+          "name": "Toitoi",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Closed triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Open triplet",
+          "fu": 2,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-b3cfb38a9e13",
+    "title": "Tenhou Houou hand 7",
+    "tags": [
+      "closed",
+      "dealer",
+      "dora-heavy",
+      "fu=20",
+      "han=limit",
+      "limit=mangan",
+      "menzen tsumo",
+      "pinfu",
+      "riichi",
+      "tsumo"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "2m",
+        "3m",
+        "4m",
+        "6m",
+        "7m",
+        "8m",
+        "7p",
+        "8p",
+        "6s",
+        "7s",
+        "8s",
+        "9s",
+        "9s"
+      ],
+      "melds": [],
+      "winningTile": "9p",
+      "seatWind": "east",
+      "roundWind": "south",
+      "winMethod": "tsumo",
+      "riichi": true,
+      "doraIndicators": [
+        "5s",
+        "P"
+      ],
+      "uraDoraIndicators": [
+        "E",
+        "2m"
+      ]
+    },
+    "answer": {
+      "han": 5,
+      "fu": 20,
+      "points": "4000 all",
+      "limitTier": "mangan",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Pinfu",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-56401e1d00b9",
+    "title": "Tenhou Houou hand 8",
+    "tags": [
+      "chiitoitsu",
+      "closed",
+      "dora-heavy",
+      "fixed fu",
+      "fu=25",
+      "han=4",
+      "limit=none",
+      "non-dealer",
+      "ron"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "3m",
+        "4m",
+        "4m",
+        "6m",
+        "6m",
+        "8m",
+        "8m",
+        "4p",
+        "4p",
+        "9p",
+        "9p",
+        "P",
+        "P"
+      ],
+      "melds": [],
+      "winningTile": "3m",
+      "seatWind": "north",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "8p"
+      ]
+    },
+    "answer": {
+      "han": 4,
+      "fu": 25,
+      "points": "6400",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Chiitoitsu",
+          "han": 2
+        },
+        {
+          "name": "Dora",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 25,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-45e759fb4c2c",
+    "title": "Tenhou Houou hand 9",
+    "tags": [
+      "closed",
+      "closed ron",
+      "dealer",
+      "dora",
+      "fu=40",
+      "han=2",
+      "limit=none",
+      "riichi",
+      "ron",
+      "triplet/kan fu"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "6m",
+        "7m",
+        "3p",
+        "4p",
+        "5p",
+        "4s",
+        "5s",
+        "6s",
+        "7s",
+        "7s",
+        "N",
+        "N",
+        "N"
+      ],
+      "melds": [],
+      "winningTile": "8m",
+      "seatWind": "east",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": true,
+      "doraIndicators": [
+        "6m"
+      ],
+      "uraDoraIndicators": [
+        "8p"
+      ]
+    },
+    "answer": {
+      "han": 2,
+      "fu": 40,
+      "points": "3900",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed ron",
+          "fu": 10,
+          "category": "hand"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-996cce49f3f5",
+    "title": "Tenhou Houou hand 10",
+    "tags": [
+      "fu=50",
+      "fu=50+",
+      "han=1",
+      "limit=none",
+      "non-dealer",
+      "open",
+      "ron",
+      "triplet/kan fu",
+      "yakuhai"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "2m",
+        "3m",
+        "2s",
+        "2s",
+        "W",
+        "W",
+        "W"
+      ],
+      "melds": [
+        {
+          "type": "kan",
+          "tiles": [
+            "N",
+            "N",
+            "N",
+            "N"
+          ],
+          "open": true,
+          "calledTile": "N"
+        },
+        {
+          "type": "pon",
+          "tiles": [
+            "1m",
+            "1m",
+            "1m"
+          ],
+          "open": true,
+          "calledTile": "1m"
+        }
+      ],
+      "winningTile": "4m",
+      "seatWind": "north",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "8p",
+        "7p"
+      ]
+    },
+    "answer": {
+      "han": 1,
+      "fu": 50,
+      "points": "1600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Yakuhai (seat wind north)",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Open terminal/honor kan",
+          "fu": 16,
+          "category": "group"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-bcafde774f87",
+    "title": "Tenhou Houou hand 11",
+    "tags": [
+      "closed",
+      "dealer",
+      "dora",
+      "fu=20",
+      "han=4",
+      "limit=none",
+      "menzen tsumo",
+      "pinfu",
+      "riichi",
+      "tsumo"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "3m",
+        "4m",
+        "5m",
+        "7m",
+        "8m",
+        "9m",
+        "3p",
+        "3p",
+        "6p",
+        "7p",
+        "8p",
+        "5s",
+        "6s"
+      ],
+      "melds": [],
+      "winningTile": "4s",
+      "seatWind": "east",
+      "roundWind": "east",
+      "winMethod": "tsumo",
+      "riichi": true,
+      "doraIndicators": [
+        "5sr"
+      ],
+      "uraDoraIndicators": [
+        "W"
+      ]
+    },
+    "answer": {
+      "han": 4,
+      "fu": 20,
+      "points": "2600 all",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Pinfu",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-bd8b8259ce22",
+    "title": "Tenhou Houou hand 12",
+    "tags": [
+      "chiitoitsu",
+      "closed",
+      "dora-heavy",
+      "fixed fu",
+      "fu=25",
+      "han=limit",
+      "limit=haneman",
+      "non-dealer",
+      "riichi",
+      "ron"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "3m",
+        "3m",
+        "8m",
+        "8m",
+        "3p",
+        "3p",
+        "7s",
+        "7s",
+        "8s",
+        "8s",
+        "W",
+        "W",
+        "C"
+      ],
+      "melds": [],
+      "winningTile": "C",
+      "seatWind": "south",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": true,
+      "doraIndicators": [
+        "6s"
+      ],
+      "uraDoraIndicators": [
+        "S"
+      ]
+    },
+    "answer": {
+      "han": 7,
+      "fu": 25,
+      "points": "12000",
+      "limitTier": "haneman",
+      "yaku": [
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Chiitoitsu",
+          "han": 2
+        },
+        {
+          "name": "Dora",
+          "han": 4
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 25,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-98f3a89c4632",
+    "title": "Tenhou Houou hand 13",
+    "tags": [
+      "closed",
+      "closed ron",
+      "fu=50+",
+      "fu=60",
+      "han=3",
+      "limit=none",
+      "non-dealer",
+      "riichi",
+      "ron",
+      "triplet/kan fu",
+      "wait fu"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "5m",
+        "6m",
+        "7m",
+        "1p",
+        "1p",
+        "1p",
+        "1s",
+        "1s",
+        "1s",
+        "9s",
+        "9s",
+        "9s",
+        "W"
+      ],
+      "melds": [],
+      "winningTile": "W",
+      "seatWind": "north",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": true,
+      "doraIndicators": [
+        "W"
+      ],
+      "uraDoraIndicators": [
+        "9m"
+      ]
+    },
+    "answer": {
+      "han": 3,
+      "fu": 60,
+      "points": "7700",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "San Ankou",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed ron",
+          "fu": 10,
+          "category": "hand"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Pair wait",
+          "fu": 2,
+          "category": "wait"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-b02d55589127",
+    "title": "Tenhou Houou hand 14",
+    "tags": [
+      "fu=30",
+      "han=1",
+      "limit=none",
+      "non-dealer",
+      "open",
+      "ron",
+      "tanyao"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "5m",
+        "6m",
+        "6m",
+        "7m",
+        "7m",
+        "8m",
+        "3p",
+        "4p",
+        "6p",
+        "6p"
+      ],
+      "melds": [
+        {
+          "type": "chi",
+          "tiles": [
+            "5s",
+            "6s",
+            "7s"
+          ],
+          "open": true,
+          "calledTile": "6s"
+        }
+      ],
+      "winningTile": "5p",
+      "seatWind": "west",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "1m"
+      ]
+    },
+    "answer": {
+      "han": 1,
+      "fu": 30,
+      "points": "1000",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Tanyao",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "No-points hand",
+          "fu": 2,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-5991f03edb17",
+    "title": "Tenhou Houou hand 15",
+    "tags": [
+      "dora",
+      "fu=40",
+      "han=2",
+      "limit=none",
+      "non-dealer",
+      "open",
+      "triplet/kan fu",
+      "tsumo",
+      "value pair",
+      "yakuhai"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "7m",
+        "8m",
+        "5p",
+        "6p",
+        "7p",
+        "P",
+        "P",
+        "P",
+        "F",
+        "F"
+      ],
+      "melds": [
+        {
+          "type": "pon",
+          "tiles": [
+            "1m",
+            "1m",
+            "1m"
+          ],
+          "open": true,
+          "calledTile": "1m"
+        }
+      ],
+      "winningTile": "6m",
+      "seatWind": "north",
+      "roundWind": "east",
+      "winMethod": "tsumo",
+      "riichi": false,
+      "doraIndicators": [
+        "7m"
+      ]
+    },
+    "answer": {
+      "han": 2,
+      "fu": 40,
+      "points": "700/1300",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Yakuhai (haku)",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Value pair",
+          "fu": 2,
+          "category": "wait"
+        },
+        {
+          "name": "Tsumo",
+          "fu": 2,
+          "category": "hand"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-9d1c9da9df22",
+    "title": "Tenhou Houou hand 16",
+    "tags": [
+      "fu=40",
+      "han=limit",
+      "limit=yakuman",
+      "non-dealer",
+      "open",
+      "ron",
+      "triplet/kan fu",
+      "wait fu"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "5mr",
+        "5m",
+        "5m",
+        "7m",
+        "F",
+        "F",
+        "F"
+      ],
+      "melds": [
+        {
+          "type": "pon",
+          "tiles": [
+            "C",
+            "C",
+            "C"
+          ],
+          "open": true,
+          "calledTile": "C"
+        },
+        {
+          "type": "pon",
+          "tiles": [
+            "P",
+            "P",
+            "P"
+          ],
+          "open": true,
+          "calledTile": "P"
+        }
+      ],
+      "winningTile": "6m",
+      "seatWind": "south",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "2p"
+      ]
+    },
+    "answer": {
+      "han": 13,
+      "fu": 40,
+      "points": "32000",
+      "limitTier": "yakuman",
+      "yaku": [
+        {
+          "name": "Daisangen",
+          "han": 13
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Closed wait",
+          "fu": 2,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-565b469ef44b",
+    "title": "Tenhou Houou hand 17",
+    "tags": [
+      "closed",
+      "dealer",
+      "fu=20",
+      "han=3",
+      "limit=none",
+      "menzen tsumo",
+      "pinfu",
+      "riichi",
+      "tsumo"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "1m",
+        "2m",
+        "3m",
+        "3m",
+        "4m",
+        "5m",
+        "3p",
+        "4p",
+        "2s",
+        "2s",
+        "5s",
+        "6s",
+        "7s"
+      ],
+      "melds": [],
+      "winningTile": "2p",
+      "seatWind": "east",
+      "roundWind": "east",
+      "winMethod": "tsumo",
+      "riichi": true,
+      "doraIndicators": [
+        "6p"
+      ],
+      "uraDoraIndicators": [
+        "9p"
+      ]
+    },
+    "answer": {
+      "han": 3,
+      "fu": 20,
+      "points": "1300 all",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Pinfu",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-36c278542cf3",
+    "title": "Tenhou Houou hand 18",
+    "tags": [
+      "chiitoitsu",
+      "closed",
+      "fixed fu",
+      "fu=25",
+      "han=2",
+      "limit=none",
+      "non-dealer",
+      "ron"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "1m",
+        "1m",
+        "3m",
+        "3m",
+        "7m",
+        "7m",
+        "8m",
+        "8m",
+        "1p",
+        "6s",
+        "6s",
+        "9s",
+        "9s"
+      ],
+      "melds": [],
+      "winningTile": "1p",
+      "seatWind": "north",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "W"
+      ]
+    },
+    "answer": {
+      "han": 2,
+      "fu": 25,
+      "points": "1600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Chiitoitsu",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 25,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-6489b932df1f",
+    "title": "Tenhou Houou hand 19",
+    "tags": [
+      "closed",
+      "dora",
+      "fu=20",
+      "han=4",
+      "limit=none",
+      "menzen tsumo",
+      "non-dealer",
+      "pinfu",
+      "riichi",
+      "tsumo"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "5m",
+        "5m",
+        "7m",
+        "8m",
+        "9m",
+        "2p",
+        "3p",
+        "7p",
+        "8p",
+        "9p",
+        "3s",
+        "4s",
+        "5s"
+      ],
+      "melds": [],
+      "winningTile": "1p",
+      "seatWind": "west",
+      "roundWind": "south",
+      "winMethod": "tsumo",
+      "riichi": true,
+      "doraIndicators": [
+        "9s",
+        "2m"
+      ],
+      "uraDoraIndicators": [
+        "5p",
+        "1p"
+      ]
+    },
+    "answer": {
+      "han": 4,
+      "fu": 20,
+      "points": "1300/2600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Pinfu",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-2634bebc939f",
+    "title": "Tenhou Houou hand 20",
+    "tags": [
+      "closed",
+      "dora-heavy",
+      "fu=50+",
+      "fu=70",
+      "han=limit",
+      "limit=mangan",
+      "menzen tsumo",
+      "non-dealer",
+      "riichi",
+      "triplet/kan fu",
+      "tsumo",
+      "wait fu"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "2m",
+        "4m",
+        "1p",
+        "1p",
+        "1p",
+        "5p",
+        "5p",
+        "2s",
+        "3s",
+        "4s"
+      ],
+      "melds": [
+        {
+          "type": "kan",
+          "tiles": [
+            "E",
+            "E",
+            "E",
+            "E"
+          ],
+          "open": false
+        }
+      ],
+      "winningTile": "3m",
+      "seatWind": "north",
+      "roundWind": "south",
+      "winMethod": "tsumo",
+      "riichi": true,
+      "doraIndicators": [
+        "4p",
+        "6p"
+      ],
+      "uraDoraIndicators": [
+        "C",
+        "3s"
+      ]
+    },
+    "answer": {
+      "han": 5,
+      "fu": 70,
+      "points": "2000/4000",
+      "limitTier": "mangan",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 3
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Closed terminal/honor kan",
+          "fu": 32,
+          "category": "group"
+        },
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Closed wait",
+          "fu": 2,
+          "category": "group"
+        },
+        {
+          "name": "Tsumo",
+          "fu": 2,
+          "category": "hand"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-0801f297eb5f",
+    "title": "Tenhou Houou hand 21",
+    "tags": [
+      "fu=30",
+      "han=1",
+      "limit=none",
+      "non-dealer",
+      "open",
+      "ron",
+      "triplet/kan fu",
+      "wait fu",
+      "yakuhai"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "1m",
+        "2m",
+        "3m",
+        "2p",
+        "3p",
+        "4p",
+        "2s"
+      ],
+      "melds": [
+        {
+          "type": "chi",
+          "tiles": [
+            "7p",
+            "8p",
+            "9p"
+          ],
+          "open": true,
+          "calledTile": "9p"
+        },
+        {
+          "type": "pon",
+          "tiles": [
+            "E",
+            "E",
+            "E"
+          ],
+          "open": true,
+          "calledTile": "E"
+        }
+      ],
+      "winningTile": "2s",
+      "seatWind": "west",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "5mr"
+      ]
+    },
+    "answer": {
+      "han": 1,
+      "fu": 30,
+      "points": "1000",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Yakuhai (round wind east)",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Pair wait",
+          "fu": 2,
+          "category": "wait"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-26dbe2d79deb",
+    "title": "Tenhou Houou hand 22",
+    "tags": [
+      "chiitoitsu",
+      "closed",
+      "dealer",
+      "fixed fu",
+      "fu=25",
+      "han=3",
+      "limit=none",
+      "riichi",
+      "ron"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "5m",
+        "5m",
+        "6m",
+        "6m",
+        "2p",
+        "2p",
+        "6p",
+        "6p",
+        "9p",
+        "9p",
+        "3s",
+        "3s",
+        "W"
+      ],
+      "melds": [],
+      "winningTile": "W",
+      "seatWind": "east",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": true,
+      "doraIndicators": [
+        "4p"
+      ],
+      "uraDoraIndicators": [
+        "2p"
+      ]
+    },
+    "answer": {
+      "han": 3,
+      "fu": 25,
+      "points": "4800",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Chiitoitsu",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 25,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-cee9feb7368d",
+    "title": "Tenhou Houou hand 23",
+    "tags": [
+      "fu=40",
+      "han=2",
+      "limit=none",
+      "non-dealer",
+      "open",
+      "ron",
+      "triplet/kan fu",
+      "yakuhai"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "5m",
+        "5m",
+        "5m",
+        "3p",
+        "4p",
+        "3s",
+        "3s",
+        "3s",
+        "9s",
+        "9s"
+      ],
+      "melds": [
+        {
+          "type": "pon",
+          "tiles": [
+            "S",
+            "S",
+            "S"
+          ],
+          "open": true,
+          "calledTile": "S"
+        }
+      ],
+      "winningTile": "5p",
+      "seatWind": "south",
+      "roundWind": "south",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "2m"
+      ]
+    },
+    "answer": {
+      "han": 2,
+      "fu": 40,
+      "points": "2600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Yakuhai (seat wind south)",
+          "han": 1
+        },
+        {
+          "name": "Yakuhai (round wind south)",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Closed triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-1101e0574f9a",
+    "title": "Tenhou Houou hand 24",
+    "tags": [
+      "closed",
+      "dora",
+      "fu=20",
+      "han=4",
+      "limit=none",
+      "menzen tsumo",
+      "non-dealer",
+      "pinfu",
+      "tsumo"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "4m",
+        "4m",
+        "5m",
+        "5m",
+        "6m",
+        "6m",
+        "7p",
+        "8p",
+        "9p",
+        "2s",
+        "2s",
+        "4s",
+        "5s"
+      ],
+      "melds": [],
+      "winningTile": "6s",
+      "seatWind": "south",
+      "roundWind": "south",
+      "winMethod": "tsumo",
+      "riichi": false,
+      "doraIndicators": [
+        "3s"
+      ]
+    },
+    "answer": {
+      "han": 4,
+      "fu": 20,
+      "points": "1300/2600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Pinfu",
+          "han": 1
+        },
+        {
+          "name": "Iipeiko",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-54c688d943c7",
+    "title": "Tenhou Houou hand 25",
+    "tags": [
+      "closed",
+      "dora-heavy",
+      "fu=20",
+      "han=limit",
+      "limit=haneman",
+      "menzen tsumo",
+      "non-dealer",
+      "pinfu",
+      "riichi",
+      "tsumo"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "6m",
+        "7m",
+        "7m",
+        "8m",
+        "9m",
+        "2p",
+        "2p",
+        "1s",
+        "2s",
+        "3s",
+        "3s",
+        "4s",
+        "5s"
+      ],
+      "melds": [],
+      "winningTile": "5m",
+      "seatWind": "south",
+      "roundWind": "south",
+      "winMethod": "tsumo",
+      "riichi": true,
+      "doraIndicators": [
+        "4s"
+      ],
+      "uraDoraIndicators": [
+        "2s"
+      ]
+    },
+    "answer": {
+      "han": 6,
+      "fu": 20,
+      "points": "3000/6000",
+      "limitTier": "haneman",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Pinfu",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 3
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-35a11831bcad",
+    "title": "Tenhou Houou hand 26",
+    "tags": [
+      "closed",
+      "closed ron",
+      "dealer",
+      "fu=40",
+      "han=1",
+      "limit=none",
+      "riichi",
+      "ron",
+      "triplet/kan fu"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "2m",
+        "3m",
+        "4m",
+        "1p",
+        "1p",
+        "2s",
+        "3s",
+        "3s",
+        "4s",
+        "4s",
+        "5s",
+        "N",
+        "N"
+      ],
+      "melds": [],
+      "winningTile": "1p",
+      "seatWind": "east",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": true,
+      "doraIndicators": [
+        "2p"
+      ],
+      "uraDoraIndicators": [
+        "N"
+      ]
+    },
+    "answer": {
+      "han": 1,
+      "fu": 40,
+      "points": "2000",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Riichi",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed ron",
+          "fu": 10,
+          "category": "hand"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-16e83c10ab46",
+    "title": "Tenhou Houou hand 27",
+    "tags": [
+      "chiitoitsu",
+      "closed",
+      "fixed fu",
+      "fu=25",
+      "han=3",
+      "limit=none",
+      "non-dealer",
+      "riichi",
+      "ron"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "4m",
+        "4m",
+        "9m",
+        "4p",
+        "4p",
+        "6p",
+        "6p",
+        "4s",
+        "4s",
+        "5s",
+        "5s",
+        "N",
+        "N"
+      ],
+      "melds": [],
+      "winningTile": "9m",
+      "seatWind": "north",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": true,
+      "doraIndicators": [
+        "9s"
+      ],
+      "uraDoraIndicators": [
+        "8p"
+      ]
+    },
+    "answer": {
+      "han": 3,
+      "fu": 25,
+      "points": "3200",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Chiitoitsu",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 25,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-068b35f4850a",
+    "title": "Tenhou Houou hand 28",
+    "tags": [
+      "closed",
+      "closed ron",
+      "fu=50",
+      "fu=50+",
+      "han=1",
+      "limit=none",
+      "non-dealer",
+      "riichi",
+      "ron",
+      "triplet/kan fu"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "2m",
+        "3m",
+        "4m",
+        "2p",
+        "2p",
+        "2p",
+        "8s",
+        "8s",
+        "9s",
+        "9s",
+        "W",
+        "W",
+        "W"
+      ],
+      "melds": [],
+      "winningTile": "9s",
+      "seatWind": "south",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": true,
+      "doraIndicators": [
+        "E"
+      ],
+      "uraDoraIndicators": [
+        "8p"
+      ]
+    },
+    "answer": {
+      "han": 1,
+      "fu": 50,
+      "points": "1600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Riichi",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        },
+        {
+          "name": "Closed ron",
+          "fu": 10,
+          "category": "hand"
+        },
+        {
+          "name": "Closed terminal/honor triplet",
+          "fu": 8,
+          "category": "group"
+        },
+        {
+          "name": "Closed triplet",
+          "fu": 4,
+          "category": "group"
+        },
+        {
+          "name": "Open terminal/honor triplet",
+          "fu": 4,
+          "category": "group"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-1dbfa0522a71",
+    "title": "Tenhou Houou hand 29",
+    "tags": [
+      "chiitoitsu",
+      "closed",
+      "fixed fu",
+      "fu=25",
+      "han=2",
+      "limit=none",
+      "non-dealer",
+      "ron"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "4m",
+        "4m",
+        "8m",
+        "8m",
+        "8s",
+        "8s",
+        "9s",
+        "9s",
+        "E",
+        "W",
+        "W",
+        "F",
+        "F"
+      ],
+      "melds": [],
+      "winningTile": "E",
+      "seatWind": "north",
+      "roundWind": "east",
+      "winMethod": "ron",
+      "riichi": false,
+      "doraIndicators": [
+        "5s"
+      ]
+    },
+    "answer": {
+      "han": 2,
+      "fu": 25,
+      "points": "1600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Chiitoitsu",
+          "han": 2
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 25,
+          "category": "base"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tenhou-houou-49d0f02bfd59",
+    "title": "Tenhou Houou hand 30",
+    "tags": [
+      "closed",
+      "dora",
+      "fu=20",
+      "han=4",
+      "limit=none",
+      "menzen tsumo",
+      "non-dealer",
+      "pinfu",
+      "riichi",
+      "tsumo"
+    ],
+    "hand": {
+      "concealedTiles": [
+        "3m",
+        "3m",
+        "4m",
+        "5m",
+        "6m",
+        "7m",
+        "8m",
+        "2p",
+        "3p",
+        "3p",
+        "4p",
+        "4p",
+        "5p"
+      ],
+      "melds": [],
+      "winningTile": "9m",
+      "seatWind": "west",
+      "roundWind": "east",
+      "winMethod": "tsumo",
+      "riichi": true,
+      "doraIndicators": [
+        "1p"
+      ],
+      "uraDoraIndicators": [
+        "W"
+      ]
+    },
+    "answer": {
+      "han": 4,
+      "fu": 20,
+      "points": "1300/2600",
+      "limitTier": "none",
+      "yaku": [
+        {
+          "name": "Menzen Tsumo",
+          "han": 1
+        },
+        {
+          "name": "Riichi",
+          "han": 1
+        },
+        {
+          "name": "Pinfu",
+          "han": 1
+        },
+        {
+          "name": "Dora",
+          "han": 1
+        }
+      ],
+      "fuBreakdown": [
+        {
+          "name": "Base fu",
+          "fu": 20,
+          "category": "base"
+        }
+      ]
+    }
+  }
+]
