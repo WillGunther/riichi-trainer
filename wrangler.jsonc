@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "richii-trainer",
+  "name": "riichi-trainer",
   "compatibility_date": "2026-05-30",
   "assets": {
     "directory": "./dist",

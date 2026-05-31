@@ -23,7 +23,7 @@ const windTiles: Record<Wind, TileCode> = {
   north: "N",
 };
 
-const GITHUB_ISSUES_URL = "https://github.com/WillGunther/richii-trainer/issues/new";
+const GITHUB_ISSUES_URL = "https://github.com/WillGunther/riichi-trainer/issues/new";
 const TILE_SOURCE_URL = "https://github.com/FluffyStuff/riichi-mahjong-tiles";
 const pointChartHanColumns = [1, 2, 3, 4] as const;
 const pointChartFuRows = [20, 25, 30, 40, 50, 60, 70] as const;
