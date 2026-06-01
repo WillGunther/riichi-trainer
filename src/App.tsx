@@ -358,14 +358,14 @@ function SettingsMenu({
           <div className="settings-section">
             <h3>Answer fields</h3>
             <div className="settings-toggle-grid">
-              {(["han", "fu", "points"] as const).map((key) => (
+              {(["han", "fu", "points", "limitTier"] as const).map((key) => (
                 <label className="toggle" key={key}>
                   <input
                     type="checkbox"
                     checked={enabled[key]}
                     onChange={(event) => setEnabled((current) => ({ ...current, [key]: event.target.checked }))}
                   />
-                  <span>{key === "points" ? "score" : key}</span>
+                  <span>{key === "points" ? "score" : key === "limitTier" ? "limit tier" : key}</span>
                 </label>
               ))}
             </div>
@@ -687,19 +687,17 @@ function AnswerPanel({
             </FieldShell>
           )}
 
-          <FieldShell label="Score tier" status={status?.limitTier ?? "idle"}>
-            <select
-              value={inputs.limitTier}
-              disabled={!enabled.points}
-              onChange={(event) => updateInput("limitTier", event.target.value as LimitTier)}
-            >
-              {Object.entries(limitTierLabels).map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
-          </FieldShell>
+          {enabled.points && enabled.limitTier ? (
+            <FieldShell label="Score tier" status={status?.limitTier ?? "idle"}>
+              <select value={inputs.limitTier} onChange={(event) => updateInput("limitTier", event.target.value as LimitTier)}>
+                {Object.entries(limitTierLabels).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </FieldShell>
+          ) : null}
         </div>
       </div>
 
@@ -760,8 +758,8 @@ function Explanation({ problem, validation }: { problem: Problem; validation: Va
           </ul>
           <div className="fu-totals">
             <span>Group {totals.group}</span>
-            <span>Wait {totals.wait}</span>
-            <span>Hand {totals.hand}</span>
+            <span>Wait/pair {totals["wait/pair"]}</span>
+            <span>Win method {totals["win method"]}</span>
             <span>Before rounding {totals.preRound}</span>
             <strong>Total {totals.rounded}</strong>
           </div>
@@ -832,7 +830,7 @@ export default function App() {
     han: true,
     fu: true,
     points: true,
-    limitTier: true,
+    limitTier: false,
     dealer: true,
     tsumo: true,
   });

@@ -13,7 +13,7 @@ export type Meld = {
   calledTile?: TileCode;
 };
 
-export type FuCategory = "base" | "group" | "wait" | "hand" | "rounding";
+export type FuCategory = "base" | "group" | "wait/pair" | "win method" | "rounding";
 export type LimitTier = "none" | "mangan" | "haneman" | "baiman" | "sanbaiman" | "yakuman";
 
 export type YakuBreakdown = {

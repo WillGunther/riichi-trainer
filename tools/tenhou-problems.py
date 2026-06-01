@@ -28,13 +28,13 @@ FU_NAME_LABELS = {
     "closed_terminal_kan": "Closed terminal/honor kan",
     "closed_terminal_pon": "Closed terminal/honor triplet",
     "hand_without_fu": "No-points hand",
-    "kanchan": "Closed wait",
+    "kanchan": "Kanchan - Closed Wait",
     "open_kan": "Open kan",
     "open_pon": "Open triplet",
     "open_terminal_kan": "Open terminal/honor kan",
     "open_terminal_pon": "Open terminal/honor triplet",
     "pair_wait": "Pair wait",
-    "penchan": "Edge wait",
+    "penchan": "Penchan - Edge Wait",
     "tsumo": "Tsumo",
     "valued_pair": "Value pair",
 }
@@ -42,7 +42,7 @@ FU_NAME_LABELS = {
 Wind = Literal["east", "south", "west", "north"]
 WinMethod = Literal["ron", "tsumo"]
 MeldType = Literal["chi", "pon", "kan"]
-FuCategory = Literal["base", "group", "wait", "hand", "rounding"]
+FuCategory = Literal["base", "group", "wait/pair", "win method", "rounding"]
 LimitTier = Literal["none", "mangan", "haneman", "baiman", "sanbaiman", "yakuman"]
 TileCode = str
 
@@ -497,6 +497,8 @@ def score_hand(
     )
     if result.error:
         return None
+    if result.fu < 20:
+        return None
 
     is_open_hand = any(decoded.open for decoded in decoded_melds)
 
@@ -537,7 +539,7 @@ def limit_tier(han: int, fu: int) -> LimitTier:
 
 def fu_breakdown(details: list[dict[str, Any]], total: int) -> list[FuBreakdownModel]:
     if not details:
-        return [FuBreakdownModel(name="Total fu", fu=total, category="hand")]
+        return [FuBreakdownModel(name="Total fu", fu=total, category="win method")]
 
     items = []
     for detail in details:
@@ -547,15 +549,20 @@ def fu_breakdown(details: list[dict[str, Any]], total: int) -> list[FuBreakdownM
         if "base" in lowered:
             if fu == 30:
                 items.append(FuBreakdownModel(name="Base fu", fu=20, category="base"))
-                items.append(FuBreakdownModel(name="Closed ron", fu=10, category="hand"))
+                items.append(FuBreakdownModel(name="Closed ron", fu=10, category="win method"))
                 continue
             category = "base"
-        elif "valued_pair" in lowered or "value pair" in lowered:
-            category = "wait"
-        elif "wait" in lowered:
-            category = "wait"
-        elif "ron" in lowered or "tsumo" in lowered or "chiitoitsu" in lowered:
-            category = "hand"
+        elif (
+            "valued_pair" in lowered
+            or "value pair" in lowered
+            or "pair_wait" in lowered
+            or "kanchan" in lowered
+            or "penchan" in lowered
+            or "wait" in lowered
+        ):
+            category = "wait/pair"
+        elif "ron" in lowered or "tsumo" in lowered or "chiitoitsu" in lowered or "hand_without_fu" in lowered:
+            category = "win method"
         elif "round" in lowered:
             category = "rounding"
         else:
@@ -650,13 +657,15 @@ def select_diverse(candidates: list[Candidate], count: int, seed: int) -> list[C
         "triplet-style",
     }
     max_limit_hands = max(3, count // 5)
+    max_chiitoitsu_hands = max(2, count // 20)
 
     while remaining and len(selected) < count:
         best_index = 0
         best_score = -1_000_000
+        limit_count = sum(1 for item in selected if item.problem.answer.limit_tier != "none")
+        chiitoitsu_count = sum(1 for item in selected if "chiitoitsu" in item.tags)
         for index, candidate in enumerate(remaining[:2000]):
             score = 20 * len((candidate.tags & target_tags) - covered)
-            limit_count = sum(1 for item in selected if item.problem.answer.limit_tier != "none")
             is_limit = candidate.problem.answer.limit_tier != "none"
 
             if is_limit and limit_count >= max_limit_hands:
@@ -665,6 +674,12 @@ def select_diverse(candidates: list[Candidate], count: int, seed: int) -> list[C
                 score -= 12 * limit_count
             else:
                 score += 8
+
+            if "chiitoitsu" in candidate.tags:
+                if chiitoitsu_count >= max_chiitoitsu_hands:
+                    score -= 200
+                else:
+                    score -= 6 * chiitoitsu_count
 
             for tag in candidate.tags:
                 if tag.startswith(("fu=", "han=", "limit=")):

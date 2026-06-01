@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 
 const file = await readFile(new URL("../src/problems.json", import.meta.url), "utf8");
 const allowedLimitTiers = new Set(["none", "mangan", "haneman", "baiman", "sanbaiman", "yakuman"]);
-const allowedFuCategories = new Set(["base", "group", "wait", "hand", "rounding"]);
+const allowedFuCategories = new Set(["base", "group", "wait/pair", "win method", "rounding"]);
 const allowedMeldTypes = new Set(["chi", "pon", "kan"]);
 const allowedTilePattern = /^(?:[1-9][mps]|5[mps]r|[ESWNPFC])$/;
 const allowedWinMethods = new Set(["ron", "tsumo"]);
@@ -162,7 +162,7 @@ const allWinMethods = new Set(problems.map((problem) => problem.hand?.winMethod)
 const hasOpenHand = problems.some((problem) => problem.hand?.melds?.length > 0);
 const hasClosedHand = problems.some((problem) => problem.hand?.melds?.length === 0);
 
-for (const required of ["group", "wait", "hand"]) {
+for (const required of ["group", "wait/pair", "win method"]) {
   if (!allFuCategories.has(required)) {
     errors.push(`Missing representative sample for fu category: ${required}.`);
   }

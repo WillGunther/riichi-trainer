@@ -36,8 +36,8 @@ export type ValidationResult = {
 const emptyCategoryTotals: Record<FuCategory, number> = {
   base: 0,
   group: 0,
-  wait: 0,
-  hand: 0,
+  "wait/pair": 0,
+  "win method": 0,
   rounding: 0,
 };
 
@@ -48,7 +48,7 @@ export function getFuTotals(answer: Answer): FuTotals {
     categoryTotals[item.category] += item.fu;
   }
 
-  const preRound = categoryTotals.base + categoryTotals.group + categoryTotals.wait + categoryTotals.hand;
+  const preRound = categoryTotals.base + categoryTotals.group + categoryTotals["wait/pair"] + categoryTotals["win method"];
   const rounded = answer.fu ?? preRound + categoryTotals.rounding;
 
   return {
@@ -136,8 +136,8 @@ export function validateAnswer(
     } else {
       if (splitFuConstituentsApply) {
         statuses.groupFu = statusFor(true, numberMatches(inputs.groupFu, expectedFuTotals.group));
-        statuses.waitFu = statusFor(true, numberMatches(inputs.waitFu, expectedFuTotals.wait));
-        statuses.handFu = statusFor(true, numberMatches(inputs.handFu, expectedFuTotals.hand));
+        statuses.waitFu = statusFor(true, numberMatches(inputs.waitFu, expectedFuTotals["wait/pair"]));
+        statuses.handFu = statusFor(true, numberMatches(inputs.handFu, expectedFuTotals["win method"]));
       }
       statuses.totalFu = statusFor(true, numberMatches(inputs.totalFu, expectedFuTotals.rounded));
     }
