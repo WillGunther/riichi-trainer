@@ -19,12 +19,14 @@ export type LimitTier = "none" | "mangan" | "haneman" | "baiman" | "sanbaiman" |
 export type YakuBreakdown = {
   name: string;
   han: number;
+  englishName: string;
 };
 
 export type FuBreakdown = {
   name: string;
   fu: number;
   category: FuCategory;
+  context?: string;
 };
 
 export type HandState = {

@@ -136,8 +136,8 @@ for (const [index, problem] of problems.entries()) {
       errors.push(`${label}.answer.yaku must be a non-empty array.`);
     } else {
       for (const yaku of problem.answer.yaku) {
-        if (typeof yaku?.name !== "string" || !Number.isInteger(yaku?.han)) {
-          errors.push(`${label}.answer.yaku entries must have name and integer han.`);
+        if (typeof yaku?.name !== "string" || !Number.isInteger(yaku?.han) || typeof yaku?.englishName !== "string") {
+          errors.push(`${label}.answer.yaku entries must have name, englishName, and integer han.`);
         }
       }
     }
@@ -149,6 +149,9 @@ for (const [index, problem] of problems.entries()) {
         for (const item of problem.answer.fuBreakdown) {
           if (typeof item?.name !== "string" || !Number.isInteger(item?.fu) || !allowedFuCategories.has(item?.category)) {
             errors.push(`${label}.answer.fuBreakdown entries must have name, integer fu, and category.`);
+          }
+          if (item?.context !== undefined && typeof item.context !== "string") {
+            errors.push(`${label}.answer.fuBreakdown context must be a string when present.`);
           }
         }
       }

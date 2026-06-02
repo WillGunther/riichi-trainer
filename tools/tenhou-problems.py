@@ -37,6 +37,40 @@ FU_NAME_LABELS = {
     "penchan": "Penchan - Edge Wait",
     "tsumo": "Tsumo",
     "valued_pair": "Value pair",
+    "double_valued_pair": "Double value pair",
+}
+YAKU_ENGLISH_LABELS = {
+    "Chantai": "Outside hand",
+    "Chiitoitsu": "Seven pairs",
+    "Chinitsu": "Full flush",
+    "Daisangen": "Big three dragons",
+    "Dora": "Dora",
+    "Honitsu": "Half flush",
+    "Honroutou": "All terminals and honors",
+    "Iipeiko": "Pure double sequence",
+    "Iipeikou": "Pure double sequence",
+    "Ittsu": "Full straight",
+    "Junchan": "Pure outside hand",
+    "Menzen Tsumo": "Fully concealed self-draw",
+    "Menzen tsumo": "Fully concealed self-draw",
+    "Pinfu": "All sequences",
+    "Riichi": "Ready hand",
+    "San Ankou": "Three concealed triplets",
+    "Sanankou": "Three concealed triplets",
+    "Sanshoku Doujun": "Mixed triple sequence",
+    "Suu Ankou": "Four concealed triplets",
+    "Suuankou": "Four concealed triplets",
+    "Tanyao": "All simples",
+    "Toitoi": "All triplets",
+}
+HONOR_TILE_LABELS = {
+    "E": "East",
+    "S": "South",
+    "W": "West",
+    "N": "North",
+    "P": "White dragon",
+    "F": "Green dragon",
+    "C": "Red dragon",
 }
 
 Wind = Literal["east", "south", "west", "north"]
@@ -156,14 +190,20 @@ class HandModel(BaseModel):
 
 
 class YakuBreakdownModel(BaseModel):
+    model_config = MODEL_CONFIG
+
     name: str
     han: int
+    english_name: str | None = Field(default=None, alias="englishName")
 
 
 class FuBreakdownModel(BaseModel):
+    model_config = MODEL_CONFIG
+
     name: str
     fu: int
     category: FuCategory
+    context: str | None = None
 
 
 class AnswerModel(BaseModel):
@@ -211,6 +251,45 @@ def tile_code(tile_id: int) -> str:
     if tile_type < 27:
         return f"{tile_type - 17}s"
     return HONOR_CODES[tile_type - 27]
+
+
+def base_tile(code: str) -> str:
+    return code.replace("r", "")
+
+
+def format_tile_name(code: str) -> str:
+    tile = base_tile(code)
+    if tile in HONOR_TILE_LABELS:
+        return HONOR_TILE_LABELS[tile]
+
+    suit_labels = {"m": "man", "p": "pin", "s": "sou"}
+    return f"{tile[0]}-{suit_labels[tile[1]]}{' red' if code.endswith('r') else ''}"
+
+
+def is_terminal_or_honor(code: str) -> bool:
+    tile = base_tile(code)
+    return tile in HONOR_TILE_LABELS or tile[0] in {"1", "9"}
+
+
+def is_dragon(code: str) -> bool:
+    return base_tile(code) in {"P", "F", "C"}
+
+
+def wind_tile(wind: Wind) -> str:
+    return HONOR_CODES[WIND_NAMES.index(wind)]
+
+
+def tile_counts(tiles: list[str]) -> Counter[str]:
+    return Counter(base_tile(tile) for tile in tiles)
+
+
+def yaku_english_name(name: str) -> str:
+    if name.startswith("Yakuhai (") and name.endswith(")"):
+        value = name.removeprefix("Yakuhai (").removesuffix(")")
+        value = value.replace("chun", "red dragon").replace("haku", "white dragon").replace("hatsu", "green dragon")
+        return f"Value honor: {value}"
+
+    return YAKU_ENGLISH_LABELS.get(name, name)
 
 
 def parse_int_list(value: str | None) -> list[int]:
@@ -508,10 +587,14 @@ def score_hand(
         points=format_points(result.cost, hand),
         limit_tier=limit_tier(result.han, result.fu),
         yaku=[
-            YakuBreakdownModel(name=yaku.name, han=yaku.han_open if is_open_hand else yaku.han_closed)
+            YakuBreakdownModel(
+                name=yaku.name,
+                han=yaku.han_open if is_open_hand else yaku.han_closed,
+                english_name=yaku_english_name(yaku.name),
+            )
             for yaku in result.yaku
         ],
-        fu_breakdown=fu_breakdown(result.fu_details, result.fu),
+        fu_breakdown=fu_breakdown(result.fu_details, result.fu, hand),
     )
 
 
@@ -537,7 +620,87 @@ def limit_tier(han: int, fu: int) -> LimitTier:
     return "none"
 
 
-def fu_breakdown(details: list[dict[str, Any]], total: int) -> list[FuBreakdownModel]:
+def fu_groups(hand: HandModel) -> list[dict[str, Any]]:
+    groups = [
+        {
+            "tile": meld.tiles[0],
+            "type": "kan" if meld.type == "kan" else "triplet",
+            "open": meld.open,
+        }
+        for meld in hand.melds
+        if meld.type in {"pon", "kan"}
+    ]
+
+    counts = tile_counts([*hand.concealed_tiles, hand.winning_tile])
+    for tile, count in counts.items():
+        if count >= 3:
+            groups.append(
+                {
+                    "tile": tile,
+                    "type": "kan" if count >= 4 else "triplet",
+                    "open": False,
+                }
+            )
+
+    return groups
+
+
+def value_pair_context(hand: HandModel) -> str | None:
+    counts = tile_counts([*hand.concealed_tiles, hand.winning_tile])
+    seat_wind_tile = wind_tile(hand.seat_wind)
+    round_wind_tile = wind_tile(hand.round_wind)
+
+    for tile, count in counts.items():
+        if count != 2:
+            continue
+        if not is_dragon(tile) and tile != seat_wind_tile and tile != round_wind_tile:
+            continue
+
+        values = []
+        if is_dragon(tile):
+            values.append("dragon")
+        if tile == seat_wind_tile:
+            values.append("seat wind")
+        if tile == round_wind_tile:
+            values.append("round wind")
+        return f"{format_tile_name(tile)} pair ({' and '.join(values)})"
+
+    return None
+
+
+def fu_context(item: FuBreakdownModel, hand: HandModel, groups: list[dict[str, Any]], used_groups: set[int]) -> str | None:
+    name = item.name.lower()
+
+    if "triplet" in name or "kan" in name:
+        wants_kan = "kan" in name
+        wants_open = "open" in name
+        wants_closed = "closed" in name
+        wants_terminal_honor = "terminal" in name or "honor" in name
+        for index, group in enumerate(groups):
+            if index in used_groups:
+                continue
+            if wants_kan != (group["type"] == "kan"):
+                continue
+            if wants_open and not group["open"]:
+                continue
+            if wants_closed and group["open"]:
+                continue
+            if wants_terminal_honor and not is_terminal_or_honor(group["tile"]):
+                continue
+
+            used_groups.add(index)
+            return f"{format_tile_name(group['tile'])} {group['type']}"
+
+    if "value pair" in name:
+        return value_pair_context(hand)
+
+    if "wait" in name:
+        return f"{format_tile_name(hand.winning_tile)} wait"
+
+    return None
+
+
+def fu_breakdown(details: list[dict[str, Any]], total: int, hand: HandModel) -> list[FuBreakdownModel]:
     if not details:
         return [FuBreakdownModel(name="Total fu", fu=total, category="win method")]
 
@@ -568,6 +731,13 @@ def fu_breakdown(details: list[dict[str, Any]], total: int) -> list[FuBreakdownM
         else:
             category = "group"
         items.append(FuBreakdownModel(name=format_fu_name(name), fu=fu, category=category))
+
+    groups = fu_groups(hand)
+    used_groups: set[int] = set()
+    items = [
+        item.model_copy(update={"context": fu_context(item, hand, groups, used_groups)})
+        for item in items
+    ]
     return items
 
 

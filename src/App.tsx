@@ -1,11 +1,11 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import * as Popover from "@radix-ui/react-popover";
 import { Info, Settings, X } from "lucide-react";
-import { problems } from "./problems";
+import { problemCount, problems } from "./problems";
 import { getEmptyInputs, getFuTotals, type AnswerInputs, type EnabledInputs, type FuInputMode, validateAnswer, type ValidationResult } from "./scoring";
 import { Tile } from "./Tile";
 import type { FieldStatus, LimitTier, Problem, TileCode, Wind } from "./types";
-import type { Dispatch, ReactNode, SetStateAction } from "react";
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from "react";
 
 const limitTierLabels: Record<LimitTier, string> = {
   none: "No limit",
@@ -153,7 +153,7 @@ function FloatingInfo({
   return (
     <Popover.Root modal={false}>
       <Popover.Trigger asChild>
-        <button className="inline-info-toggle" type="button" aria-label={label}>
+        <button className="inline-info-toggle" type="button" aria-label={label} tabIndex={-1}>
           <Info size={13} strokeWidth={2.5} />
         </button>
       </Popover.Trigger>
@@ -173,6 +173,81 @@ function FloatingInfo({
         </Popover.Content>
       </Popover.Portal>
     </Popover.Root>
+  );
+}
+
+function PointChartCell({ han, fu, dealer }: { han: number; fu: number; dealer: boolean }) {
+  const cell = getChartCell(han, fu, dealer);
+
+  if (!cell) {
+    return <span className="points-main unavailable">-</span>;
+  }
+
+  return (
+    <>
+      <span className="points-main">{cell.label ?? cell.ron}</span>
+      <span className={dealer ? "points-sub" : "points-sub points-sub-inline"}>
+        ({cell.tsumo}) {dealer ? cell.tsumoSuffix ?? "" : ""}
+      </span>
+    </>
+  );
+}
+
+function MobilePointChartCell({ han, fu, dealer }: { han: number; fu: number; dealer: boolean }) {
+  const cell = getChartCell(han, fu, dealer);
+
+  if (!cell) {
+    return <span className="points-main unavailable">-</span>;
+  }
+
+  const tsumoParts = dealer ? null : cell.tsumo.split(" / ");
+
+  return (
+    <>
+      <span className="points-main">{cell.label ?? cell.ron}</span>
+      {dealer || !tsumoParts ? (
+        <span className="points-sub">
+          ({cell.tsumo}) {cell.tsumoSuffix ?? ""}
+        </span>
+      ) : (
+        <span className="points-sub mobile-stacked-tsumo">
+          <span>({tsumoParts[0]} /</span>
+          <span>{tsumoParts[1]})</span>
+        </span>
+      )}
+    </>
+  );
+}
+
+function MobilePointSection({ title, dealer }: { title: string; dealer: boolean }) {
+  return (
+    <section className="mobile-points-section">
+      <h4>{title}</h4>
+      <table className="mobile-points-table">
+        <thead>
+          <tr>
+            <th scope="col">Fu</th>
+            {pointChartHanColumns.map((han) => (
+              <th scope="col" key={`${title}-${han}`}>
+                {han} han
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {pointChartFuRows.map((fu) => (
+            <tr key={`${title}-${fu}`}>
+              <th scope="row">{fu}</th>
+              {pointChartHanColumns.map((han) => (
+                <td key={`${title}-${fu}-${han}`}>
+                  <MobilePointChartCell han={han} fu={fu} dealer={dealer} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
   );
 }
 
@@ -226,20 +301,9 @@ function PointsReference() {
                 .slice()
                 .reverse()
                 .map((han) => {
-                  const cell = getChartCell(han, fu, true);
-
                   return (
                     <td key={`${fu}-dealer-${han}`}>
-                      {cell ? (
-                        <>
-                          <span className="points-main">{cell.label ?? cell.ron}</span>
-                          <span className="points-sub">
-                            ({cell.tsumo}) {cell.tsumoSuffix ?? ""}
-                          </span>
-                        </>
-                      ) : (
-                        <span className="points-main unavailable">-</span>
-                      )}
+                      <PointChartCell han={han} fu={fu} dealer />
                     </td>
                   );
                 })}
@@ -247,18 +311,9 @@ function PointsReference() {
                 {fu} fu
               </th>
               {pointChartHanColumns.map((han) => {
-                const cell = getChartCell(han, fu, false);
-
                 return (
                   <td key={`${fu}-non-dealer-${han}`}>
-                    {cell ? (
-                      <>
-                        <span className="points-main">{cell.label ?? cell.ron}</span>
-                        <span className="points-sub points-sub-inline">({cell.tsumo})</span>
-                      </>
-                    ) : (
-                      <span className="points-main unavailable">-</span>
-                    )}
+                    <PointChartCell han={han} fu={fu} dealer={false} />
                   </td>
                 );
               })}
@@ -295,6 +350,37 @@ function PointsReference() {
           ))}
         </tbody>
       </table>
+
+      <div className="mobile-points-reference">
+        <MobilePointSection title="Dealer" dealer />
+        <MobilePointSection title="Non-dealer" dealer={false} />
+
+        <section className="mobile-points-section">
+          <h4>Limits</h4>
+          <div className="mobile-limit-list">
+            {limitPointRows.map((row) => (
+              <div className="mobile-limit-row" key={row.tier}>
+                <div>
+                  <strong>{row.label}</strong>
+                  <span>{row.han}</span>
+                </div>
+                <div className="mobile-limit-payment">
+                  <span className="mobile-limit-label">Dealer</span>
+                  <span className="points-main">{formatPointValue(roundUpToHundred(row.basePoints * 6))}</span>
+                  <span className="points-sub">({formatPointValue(roundUpToHundred(row.basePoints * 2))} all)</span>
+                </div>
+                <div className="mobile-limit-payment">
+                  <span className="mobile-limit-label">Non-dealer</span>
+                  <span className="points-main">{formatPointValue(roundUpToHundred(row.basePoints * 4))}</span>
+                  <span className="points-sub">
+                    ({formatPointValue(roundUpToHundred(row.basePoints))} / {formatPointValue(roundUpToHundred(row.basePoints * 2))})
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
@@ -315,6 +401,8 @@ function TileOrder({ tiles, beginnerMode }: { tiles: TileCode[]; beginnerMode: b
 function SettingsMenu({
   beginnerMode,
   setBeginnerMode,
+  showEnglishYakuNames,
+  setShowEnglishYakuNames,
   enabled,
   setEnabled,
   fuInputMode,
@@ -322,6 +410,8 @@ function SettingsMenu({
 }: {
   beginnerMode: boolean;
   setBeginnerMode: Dispatch<SetStateAction<boolean>>;
+  showEnglishYakuNames: boolean;
+  setShowEnglishYakuNames: Dispatch<SetStateAction<boolean>>;
   enabled: EnabledInputs;
   setEnabled: Dispatch<SetStateAction<EnabledInputs>>;
   fuInputMode: FuInputMode;
@@ -351,7 +441,15 @@ function SettingsMenu({
                 checked={beginnerMode}
                 onChange={(event) => setBeginnerMode(event.target.checked)}
               />
-              <span>Beginner tile labels</span>
+              <span>Tile Labels</span>
+            </label>
+            <label className="toggle">
+              <input
+                type="checkbox"
+                checked={showEnglishYakuNames}
+                onChange={(event) => setShowEnglishYakuNames(event.target.checked)}
+              />
+              <span>English Han Names</span>
             </label>
           </div>
 
@@ -404,7 +502,18 @@ function BinaryField({
   return (
     <label className={`field binary-field ${status}`}>
       <span>{label}</span>
-      <input type="checkbox" checked={checked} disabled={disabled} onChange={(event) => onChange(event.target.checked)} />
+      <input
+        type="checkbox"
+        checked={checked}
+        disabled={disabled}
+        onChange={(event) => onChange(event.target.checked)}
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            onChange(!checked);
+          }
+        }}
+      />
     </label>
   );
 }
@@ -559,6 +668,7 @@ function AnswerPanel({
   submitted,
   onSubmit,
   onNextProblem,
+  nextButtonRef,
 }: {
   inputs: AnswerInputs;
   setInputs: Dispatch<SetStateAction<AnswerInputs>>;
@@ -569,6 +679,7 @@ function AnswerPanel({
   submitted: boolean;
   onSubmit: () => void;
   onNextProblem: () => void;
+  nextButtonRef: RefObject<HTMLButtonElement | null>;
 }) {
   const status = validation?.statuses;
   const updateInput = <K extends keyof AnswerInputs>(key: K, value: AnswerInputs[K]) => setInputs((current) => ({ ...current, [key]: value }));
@@ -580,7 +691,7 @@ function AnswerPanel({
           <p className="eyebrow">Your answer</p>
           <h2 id="answer-title">Score this hand</h2>
         </div>
-        <button className="primary-action next-action" type="button" onClick={onNextProblem}>
+        <button ref={nextButtonRef} className="primary-action next-action" type="button" onClick={onNextProblem}>
           Next hand
         </button>
       </div>
@@ -714,7 +825,15 @@ function AnswerPanel({
   );
 }
 
-function Explanation({ problem, validation }: { problem: Problem; validation: ValidationResult | null }) {
+function Explanation({
+  problem,
+  validation,
+  showEnglishYakuNames,
+}: {
+  problem: Problem;
+  validation: ValidationResult | null;
+  showEnglishYakuNames: boolean;
+}) {
   const answer = problem.answer;
   const totals = validation?.expectedFuTotals ?? getFuTotals(answer);
   const limitText = answer.limitTier === "none" ? "No limit tier" : limitTierLabels[answer.limitTier];
@@ -739,7 +858,10 @@ function Explanation({ problem, validation }: { problem: Problem; validation: Va
             {answer.yaku.map((yaku) => (
               <li key={yaku.name}>
                 <span>{yaku.han} han</span>
-                <strong>{yaku.name}</strong>
+                <strong>
+                  {showEnglishYakuNames ? yaku.englishName : yaku.name}
+                  {showEnglishYakuNames && yaku.englishName !== yaku.name ? <small>{yaku.name}</small> : null}
+                </strong>
               </li>
             ))}
           </ul>
@@ -748,10 +870,13 @@ function Explanation({ problem, validation }: { problem: Problem; validation: Va
         <div>
           <h3>Fu</h3>
           <ul className="breakdown-list">
-            {(answer.fuBreakdown ?? []).map((fu) => (
-              <li key={`${fu.name}-${fu.fu}`}>
+            {(answer.fuBreakdown ?? []).map((fu, index) => (
+              <li key={`${fu.name}-${fu.fu}-${index}`}>
                 <span>{fu.fu} fu</span>
-                <strong>{fu.name}</strong>
+                <strong>
+                  {fu.name}
+                  {fu.context ? <small>{fu.context}</small> : null}
+                </strong>
                 <em>{fu.category}</em>
               </li>
             ))}
@@ -784,19 +909,19 @@ function ReportFooter({ problemId }: { problemId: string }) {
     <footer className="app-footer">
       <div>
         See an issue with this hand?{" "}
-        <a href={getHandIssueUrl(problemId)} target="_blank" rel="noreferrer">
+        <a href={getHandIssueUrl(problemId)} target="_blank" rel="noreferrer" tabIndex={-1}>
           Report it here.
         </a>
       </div>
       <div>
         See an issue with the tool?{" "}
-        <a href={getToolIssueUrl()} target="_blank" rel="noreferrer">
+        <a href={getToolIssueUrl()} target="_blank" rel="noreferrer" tabIndex={-1}>
           Report it here.
         </a>
       </div>
       <div>
         Tile art from{" "}
-        <a href={TILE_SOURCE_URL} target="_blank" rel="noreferrer">
+        <a href={TILE_SOURCE_URL} target="_blank" rel="noreferrer" tabIndex={-1}>
           FluffyStuff/riichi-mahjong-tiles
         </a>
       </div>
@@ -809,7 +934,7 @@ function EndOfHandsNotice({ onDismiss }: { onDismiss: () => void }) {
     <div className="notice-backdrop" role="presentation">
       <section className="panel notice-dialog" role="dialog" aria-modal="true" aria-labelledby="end-of-hands-title">
         <p className="eyebrow">Table reset</p>
-        <h2 id="end-of-hands-title">You reached the end of the current hands</h2>
+        <h2 id="end-of-hands-title">You reached the end of all {problemCount} current hands</h2>
         <p>The trainer reshuffled the set, so hands you have already seen will appear again. More hands will be generated in the future once we are confident in the generation process.</p>
         <button className="primary-action" type="button" onClick={onDismiss}>
           Continue
@@ -839,6 +964,8 @@ export default function App() {
   const [sessionCounted, setSessionCounted] = useState(false);
   const [session, setSession] = useState({ correct: 0, incorrect: 0, skipped: 0 });
   const [showEndOfHandsNotice, setShowEndOfHandsNotice] = useState(false);
+  const [showEnglishYakuNames, setShowEnglishYakuNames] = useState(false);
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
   const problem = problems.find((candidate) => candidate.id === currentProblemId) ?? problems[0];
 
@@ -859,6 +986,7 @@ export default function App() {
       }));
       setSessionCounted(true);
     }
+    nextButtonRef.current?.focus();
   }
 
   function nextProblem() {
@@ -902,6 +1030,8 @@ export default function App() {
           <SettingsMenu
             beginnerMode={beginnerMode}
             setBeginnerMode={setBeginnerMode}
+            showEnglishYakuNames={showEnglishYakuNames}
+            setShowEnglishYakuNames={setShowEnglishYakuNames}
             enabled={enabled}
             setEnabled={setEnabled}
             fuInputMode={fuInputMode}
@@ -922,11 +1052,16 @@ export default function App() {
           submitted={submitted}
           onSubmit={submitAnswer}
           onNextProblem={nextProblem}
+          nextButtonRef={nextButtonRef}
         />
       </div>
 
       {submitted ? (
-        <Explanation problem={problem} validation={selectedValidation} />
+        <Explanation
+          problem={problem}
+          validation={selectedValidation}
+          showEnglishYakuNames={showEnglishYakuNames}
+        />
       ) : null}
 
       <ReportFooter problemId={problem.id} />

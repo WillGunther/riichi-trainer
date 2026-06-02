@@ -1,6 +1,6 @@
 [
   {
-    "id": "tenhou-houou-d72f924910c0",
+    "id": "tenhou-houou-f8668c59dfc6",
     "title": "Tenhou Houou hand 1",
     "tags": [
       "closed",
@@ -51,19 +51,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -76,7 +80,7 @@
     }
   },
   {
-    "id": "tenhou-houou-4c51a8d9b1cd",
+    "id": "tenhou-houou-293e0b86ff28",
     "title": "Tenhou Houou hand 2",
     "tags": [
       "dealer",
@@ -133,11 +137,13 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -149,18 +155,20 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-0cb71aa6e047",
+    "id": "tenhou-houou-c49c1c99adb9",
     "title": "Tenhou Houou hand 3",
     "tags": [
       "flush/half-flush",
@@ -216,7 +224,8 @@
       "yaku": [
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -228,28 +237,32 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-sou triplet"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Red dragon pair (dragon)"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Red dragon wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-757d1c9b4819",
+    "id": "tenhou-houou-707c5496b774",
     "title": "Tenhou Houou hand 4",
     "tags": [
       "chiitoitsu",
@@ -300,15 +313,18 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -321,7 +337,7 @@
     }
   },
   {
-    "id": "tenhou-houou-a1559818e8ef",
+    "id": "tenhou-houou-2e80a7f8bb78",
     "title": "Tenhou Houou hand 5",
     "tags": [
       "fu=50+",
@@ -385,14 +401,16 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "1-sou kan"
         },
         {
           "name": "Base fu",
@@ -402,23 +420,26 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "8-sou triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-45487208e20d",
+    "id": "tenhou-houou-a4402f0ab6be",
     "title": "Tenhou Houou hand 6",
     "tags": [
       "dealer",
@@ -479,7 +500,8 @@
       "yaku": [
         {
           "name": "Toitoi",
-          "han": 2
+          "han": 2,
+          "englishName": "All triplets"
         }
       ],
       "fuBreakdown": [
@@ -491,17 +513,20 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "1-pin triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "5-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Open triplet",
@@ -512,7 +537,7 @@
     }
   },
   {
-    "id": "tenhou-houou-af77c7daf4fd",
+    "id": "tenhou-houou-6eb1e287acf5",
     "title": "Tenhou Houou hand 7",
     "tags": [
       "closed",
@@ -562,15 +587,18 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -587,23 +615,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-69dab8fa35ae",
+    "id": "tenhou-houou-0449aa732f50",
     "title": "Tenhou Houou hand 8",
     "tags": [
       "closed",
@@ -656,19 +687,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 5
+          "han": 5,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -681,7 +716,7 @@
     }
   },
   {
-    "id": "tenhou-houou-6959a68573e1",
+    "id": "tenhou-houou-906e1b8feacf",
     "title": "Tenhou Houou hand 9",
     "tags": [
       "dealer",
@@ -742,7 +777,8 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         }
       ],
       "fuBreakdown": [
@@ -754,18 +790,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-pin triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-22f86c02d266",
+    "id": "tenhou-houou-a961144a6e2e",
     "title": "Tenhou Houou hand 10",
     "tags": [
       "closed",
@@ -816,19 +854,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -841,7 +883,7 @@
     }
   },
   {
-    "id": "tenhou-houou-dfb8dc7ddf7a",
+    "id": "tenhou-houou-4bdea6f4e424",
     "title": "Tenhou Houou hand 11",
     "tags": [
       "dealer",
@@ -908,11 +950,13 @@
       "yaku": [
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -924,17 +968,20 @@
         {
           "name": "Closed kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "6-pin kan"
         },
         {
           "name": "Open terminal/honor kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon kan"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-man wait"
         },
         {
           "name": "Tsumo",
@@ -945,7 +992,7 @@
     }
   },
   {
-    "id": "tenhou-houou-75cbcf61bcf7",
+    "id": "tenhou-houou-8e3561a964b3",
     "title": "Tenhou Houou hand 12",
     "tags": [
       "closed",
@@ -999,19 +1046,23 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Dora",
-          "han": 4
+          "han": 4,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -1029,7 +1080,7 @@
     }
   },
   {
-    "id": "tenhou-houou-45c6696bb76c",
+    "id": "tenhou-houou-c5d15c220630",
     "title": "Tenhou Houou hand 13",
     "tags": [
       "dealer",
@@ -1092,11 +1143,13 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -1108,17 +1161,20 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-sou triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-man wait"
         },
         {
           "name": "Tsumo",
@@ -1129,7 +1185,7 @@
     }
   },
   {
-    "id": "tenhou-houou-f7dc5bbe6ca8",
+    "id": "tenhou-houou-d433d5032d6e",
     "title": "Tenhou Houou hand 14",
     "tags": [
       "closed",
@@ -1180,19 +1236,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -1205,7 +1265,7 @@
     }
   },
   {
-    "id": "tenhou-houou-4501dd5c6a50",
+    "id": "tenhou-houou-588761e241dd",
     "title": "Tenhou Houou hand 15",
     "tags": [
       "fu=40",
@@ -1259,7 +1319,8 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         }
       ],
       "fuBreakdown": [
@@ -1271,12 +1332,14 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
@@ -1287,7 +1350,7 @@
     }
   },
   {
-    "id": "tenhou-houou-a173bdde2a36",
+    "id": "tenhou-houou-cac88c65d403",
     "title": "Tenhou Houou hand 16",
     "tags": [
       "closed",
@@ -1336,7 +1399,8 @@
       "yaku": [
         {
           "name": "Suu Ankou",
-          "han": 13
+          "han": 13,
+          "englishName": "Four concealed triplets"
         }
       ],
       "fuBreakdown": [
@@ -1348,22 +1412,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "6-pin triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "3-sou triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "4-sou triplet"
         },
         {
           "name": "Tsumo",
@@ -1374,7 +1442,7 @@
     }
   },
   {
-    "id": "tenhou-houou-11d1b3481f65",
+    "id": "tenhou-houou-66b02bc2076e",
     "title": "Tenhou Houou hand 17",
     "tags": [
       "chiitoitsu",
@@ -1421,11 +1489,13 @@
       "yaku": [
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -1438,7 +1508,7 @@
     }
   },
   {
-    "id": "tenhou-houou-8144100357b1",
+    "id": "tenhou-houou-837dc7e3cf12",
     "title": "Tenhou Houou hand 18",
     "tags": [
       "closed",
@@ -1484,11 +1554,13 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -1501,7 +1573,7 @@
     }
   },
   {
-    "id": "tenhou-houou-8dcbc641baa6",
+    "id": "tenhou-houou-ebcf2072ca52",
     "title": "Tenhou Houou hand 19",
     "tags": [
       "dora",
@@ -1556,11 +1628,13 @@
       "yaku": [
         {
           "name": "Junchan",
-          "han": 2
+          "han": 2,
+          "englishName": "Pure outside hand"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -1572,12 +1646,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-sou triplet"
         },
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-man wait"
         },
         {
           "name": "Tsumo",
@@ -1588,7 +1664,7 @@
     }
   },
   {
-    "id": "tenhou-houou-3737204e225f",
+    "id": "tenhou-houou-8bcf7e6a8d37",
     "title": "Tenhou Houou hand 20",
     "tags": [
       "fu=30",
@@ -1643,7 +1719,8 @@
       "yaku": [
         {
           "name": "Yakuhai (seat wind west)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind west"
         }
       ],
       "fuBreakdown": [
@@ -1655,18 +1732,20 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-man wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-5133a1816e9b",
+    "id": "tenhou-houou-22cd346fd144",
     "title": "Tenhou Houou hand 21",
     "tags": [
       "closed",
@@ -1718,23 +1797,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -1747,7 +1831,7 @@
     }
   },
   {
-    "id": "tenhou-houou-802f4789cbfd",
+    "id": "tenhou-houou-31db6d29d4a2",
     "title": "Tenhou Houou hand 22",
     "tags": [
       "closed",
@@ -1810,22 +1894,26 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon kan"
         },
         {
           "name": "Base fu",
@@ -1835,7 +1923,8 @@
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-pin wait"
         },
         {
           "name": "Tsumo",
@@ -1846,7 +1935,7 @@
     }
   },
   {
-    "id": "tenhou-houou-0d05bdebeb58",
+    "id": "tenhou-houou-3d80a2d817ed",
     "title": "Tenhou Houou hand 23",
     "tags": [
       "closed",
@@ -1897,11 +1986,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -1918,13 +2009,14 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "8-sou triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-3cd33d311768",
+    "id": "tenhou-houou-ed86c6cf0b4e",
     "title": "Tenhou Houou hand 24",
     "tags": [
       "closed",
@@ -1975,19 +2067,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -2000,7 +2096,7 @@
     }
   },
   {
-    "id": "tenhou-houou-15a362057289",
+    "id": "tenhou-houou-7e99bab48427",
     "title": "Tenhou Houou hand 25",
     "tags": [
       "closed",
@@ -2058,26 +2154,31 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "San Ankou",
-          "han": 2
+          "han": 2,
+          "englishName": "Three concealed triplets"
         },
         {
           "name": "Dora",
-          "han": 4
+          "han": 4,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon kan"
         },
         {
           "name": "Base fu",
@@ -2087,12 +2188,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-sou triplet"
         },
         {
           "name": "Tsumo",
@@ -2103,7 +2206,7 @@
     }
   },
   {
-    "id": "tenhou-houou-f783cbbd03ce",
+    "id": "tenhou-houou-d37631b4cf80",
     "title": "Tenhou Houou hand 26",
     "tags": [
       "fu=40",
@@ -2164,7 +2267,8 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind east"
         }
       ],
       "fuBreakdown": [
@@ -2176,18 +2280,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-9aee425d27e9",
+    "id": "tenhou-houou-e503ba04f7cd",
     "title": "Tenhou Houou hand 27",
     "tags": [
       "closed",
@@ -2237,15 +2343,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -2258,7 +2367,7 @@
     }
   },
   {
-    "id": "tenhou-houou-6f283ef9ad8c",
+    "id": "tenhou-houou-d83ae2b6382d",
     "title": "Tenhou Houou hand 28",
     "tags": [
       "dora-heavy",
@@ -2313,11 +2422,13 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind east"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -2329,7 +2440,8 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Open terminal/honor triplet",
@@ -2340,7 +2452,7 @@
     }
   },
   {
-    "id": "tenhou-houou-d64762fa4a08",
+    "id": "tenhou-houou-5e3f5e586e32",
     "title": "Tenhou Houou hand 29",
     "tags": [
       "closed",
@@ -2393,19 +2505,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (seat wind west)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind west"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -2417,12 +2533,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Red dragon pair (dragon)"
         },
         {
           "name": "Tsumo",
@@ -2433,7 +2551,7 @@
     }
   },
   {
-    "id": "tenhou-houou-aa361fcb677b",
+    "id": "tenhou-houou-6e471eb287e8",
     "title": "Tenhou Houou hand 30",
     "tags": [
       "closed",
@@ -2485,11 +2603,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         }
       ],
       "fuBreakdown": [
@@ -2506,7 +2626,8 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
@@ -2517,7 +2638,7 @@
     }
   },
   {
-    "id": "tenhou-houou-d4187c40aa66",
+    "id": "tenhou-houou-37b5e74d810e",
     "title": "Tenhou Houou hand 31",
     "tags": [
       "closed",
@@ -2567,15 +2688,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -2588,7 +2712,7 @@
     }
   },
   {
-    "id": "tenhou-houou-c96c4c1caa52",
+    "id": "tenhou-houou-53cf18d583a4",
     "title": "Tenhou Houou hand 32",
     "tags": [
       "fu=40",
@@ -2642,7 +2766,8 @@
       "yaku": [
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         }
       ],
       "fuBreakdown": [
@@ -2654,18 +2779,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-4325d89b1daa",
+    "id": "tenhou-houou-a91e67a010d7",
     "title": "Tenhou Houou hand 33",
     "tags": [
       "chiitoitsu",
@@ -2711,7 +2838,8 @@
       "yaku": [
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         }
       ],
       "fuBreakdown": [
@@ -2724,7 +2852,7 @@
     }
   },
   {
-    "id": "tenhou-houou-7ddf47ce47d8",
+    "id": "tenhou-houou-39763052fc11",
     "title": "Tenhou Houou hand 34",
     "tags": [
       "closed",
@@ -2788,22 +2916,26 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "North kan"
         },
         {
           "name": "Base fu",
@@ -2819,7 +2951,7 @@
     }
   },
   {
-    "id": "tenhou-houou-3e692361b4cf",
+    "id": "tenhou-houou-7b7aee91d19a",
     "title": "Tenhou Houou hand 35",
     "tags": [
       "closed",
@@ -2865,7 +2997,8 @@
       "yaku": [
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -2883,7 +3016,7 @@
     }
   },
   {
-    "id": "tenhou-houou-c8a28736ef34",
+    "id": "tenhou-houou-ec7a68278fa6",
     "title": "Tenhou Houou hand 36",
     "tags": [
       "closed",
@@ -2933,15 +3066,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -2954,7 +3090,7 @@
     }
   },
   {
-    "id": "tenhou-houou-a055322f3748",
+    "id": "tenhou-houou-2809c7096886",
     "title": "Tenhou Houou hand 37",
     "tags": [
       "fu=40",
@@ -3015,7 +3151,8 @@
       "yaku": [
         {
           "name": "Daisangen",
-          "han": 13
+          "han": 13,
+          "englishName": "Big three dragons"
         }
       ],
       "fuBreakdown": [
@@ -3027,28 +3164,32 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "6-man wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-16118a0136e4",
+    "id": "tenhou-houou-d341e6191ae1",
     "title": "Tenhou Houou hand 38",
     "tags": [
       "closed",
@@ -3099,19 +3240,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -3124,7 +3269,7 @@
     }
   },
   {
-    "id": "tenhou-houou-a24d44bd6525",
+    "id": "tenhou-houou-c094ca5afcb3",
     "title": "Tenhou Houou hand 39",
     "tags": [
       "closed",
@@ -3176,11 +3321,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -3197,18 +3344,20 @@
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-pin wait"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Green dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-b8cbb13f8fb6",
+    "id": "tenhou-houou-db4c5908a6c5",
     "title": "Tenhou Houou hand 40",
     "tags": [
       "closed",
@@ -3257,7 +3406,8 @@
       "yaku": [
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         }
       ],
       "fuBreakdown": [
@@ -3274,23 +3424,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "3-sou triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-man wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-cbdca6656d9c",
+    "id": "tenhou-houou-6809d7735961",
     "title": "Tenhou Houou hand 41",
     "tags": [
       "closed",
@@ -3346,27 +3499,33 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -3379,7 +3538,7 @@
     }
   },
   {
-    "id": "tenhou-houou-7175ccde826d",
+    "id": "tenhou-houou-a7afe869b646",
     "title": "Tenhou Houou hand 42",
     "tags": [
       "closed",
@@ -3429,11 +3588,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Ittsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Full straight"
         }
       ],
       "fuBreakdown": [
@@ -3450,13 +3611,14 @@
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-af74fe80d7dd",
+    "id": "tenhou-houou-5f8c3481378c",
     "title": "Tenhou Houou hand 43",
     "tags": [
       "closed",
@@ -3504,19 +3666,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -3529,7 +3695,7 @@
     }
   },
   {
-    "id": "tenhou-houou-3b3d862a8101",
+    "id": "tenhou-houou-2f4f5fd973a8",
     "title": "Tenhou Houou hand 44",
     "tags": [
       "chiitoitsu",
@@ -3575,7 +3741,8 @@
       "yaku": [
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         }
       ],
       "fuBreakdown": [
@@ -3588,7 +3755,7 @@
     }
   },
   {
-    "id": "tenhou-houou-281a350f7599",
+    "id": "tenhou-houou-89b400c4d1d2",
     "title": "Tenhou Houou hand 45",
     "tags": [
       "dealer",
@@ -3661,26 +3828,31 @@
       "yaku": [
         {
           "name": "Honroutou",
-          "han": 2
+          "han": 2,
+          "englishName": "All terminals and honors"
         },
         {
           "name": "Toitoi",
-          "han": 2
+          "han": 2,
+          "englishName": "All triplets"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         },
         {
           "name": "Dora",
-          "han": 4
+          "han": 4,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "1-pin kan"
         },
         {
           "name": "Base fu",
@@ -3690,17 +3862,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "9-pin triplet"
         },
         {
           "name": "Tsumo",
@@ -3711,7 +3886,7 @@
     }
   },
   {
-    "id": "tenhou-houou-4ca71d20d174",
+    "id": "tenhou-houou-499cffd0c52c",
     "title": "Tenhou Houou hand 46",
     "tags": [
       "fu=30",
@@ -3772,7 +3947,8 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         }
       ],
       "fuBreakdown": [
@@ -3784,13 +3960,14 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-3380f58ac14a",
+    "id": "tenhou-houou-749454466964",
     "title": "Tenhou Houou hand 47",
     "tags": [
       "closed",
@@ -3842,11 +4019,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -3863,18 +4042,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-pin triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-73c99082ed2c",
+    "id": "tenhou-houou-acfed74e6942",
     "title": "Tenhou Houou hand 48",
     "tags": [
       "closed",
@@ -3925,19 +4106,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -3950,7 +4135,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ac7ece8da334",
+    "id": "tenhou-houou-4a67427ecf54",
     "title": "Tenhou Houou hand 49",
     "tags": [
       "fu=50+",
@@ -4015,11 +4200,13 @@
       "yaku": [
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Yakuhai (seat wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind south"
         }
       ],
       "fuBreakdown": [
@@ -4031,22 +4218,26 @@
         {
           "name": "Open terminal/honor kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon kan"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-pin triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "1-sou wait"
         },
         {
           "name": "Tsumo",
@@ -4057,7 +4248,7 @@
     }
   },
   {
-    "id": "tenhou-houou-07b1968a06bd",
+    "id": "tenhou-houou-294fd1cc54d8",
     "title": "Tenhou Houou hand 50",
     "tags": [
       "closed",
@@ -4102,7 +4293,8 @@
       "yaku": [
         {
           "name": "Suu Ankou",
-          "han": 13
+          "han": 13,
+          "englishName": "Four concealed triplets"
         }
       ],
       "fuBreakdown": [
@@ -4114,22 +4306,26 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "5-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "5-pin triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-sou triplet"
         },
         {
           "name": "Tsumo",
@@ -4140,7 +4336,7 @@
     }
   },
   {
-    "id": "tenhou-houou-3cf28813e0fe",
+    "id": "tenhou-houou-572f1f11b634",
     "title": "Tenhou Houou hand 51",
     "tags": [
       "fu=30",
@@ -4202,7 +4398,8 @@
       "yaku": [
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         }
       ],
       "fuBreakdown": [
@@ -4214,17 +4411,20 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-sou wait"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "8-man triplet"
         },
         {
           "name": "Tsumo",
@@ -4235,7 +4435,7 @@
     }
   },
   {
-    "id": "tenhou-houou-be1eefd574ee",
+    "id": "tenhou-houou-005604c3d257",
     "title": "Tenhou Houou hand 52",
     "tags": [
       "closed",
@@ -4285,15 +4485,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -4306,7 +4509,7 @@
     }
   },
   {
-    "id": "tenhou-houou-2bee8670bee5",
+    "id": "tenhou-houou-0b52fde547d0",
     "title": "Tenhou Houou hand 53",
     "tags": [
       "closed",
@@ -4357,11 +4560,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -4378,13 +4583,14 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "8-sou triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-ed5fd6dcfa6c",
+    "id": "tenhou-houou-1accdad10c98",
     "title": "Tenhou Houou hand 54",
     "tags": [
       "closed",
@@ -4448,22 +4654,26 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon kan"
         },
         {
           "name": "Base fu",
@@ -4478,13 +4688,14 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-man wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-92167ae5fcd1",
+    "id": "tenhou-houou-1deb9940a1fd",
     "title": "Tenhou Houou hand 55",
     "tags": [
       "closed",
@@ -4535,7 +4746,8 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -4552,18 +4764,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-sou triplet"
         },
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-a6397c3c4a90",
+    "id": "tenhou-houou-06b4898c8a2a",
     "title": "Tenhou Houou hand 56",
     "tags": [
       "closed",
@@ -4613,15 +4827,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -4634,7 +4851,7 @@
     }
   },
   {
-    "id": "tenhou-houou-91cd0a20bb98",
+    "id": "tenhou-houou-3496ba166c1a",
     "title": "Tenhou Houou hand 57",
     "tags": [
       "closed",
@@ -4681,7 +4898,8 @@
       "yaku": [
         {
           "name": "San Ankou",
-          "han": 2
+          "han": 2,
+          "englishName": "Three concealed triplets"
         }
       ],
       "fuBreakdown": [
@@ -4698,23 +4916,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "North triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "3-pin triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "6-sou triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-4a93010c99eb",
+    "id": "tenhou-houou-55698b67073b",
     "title": "Tenhou Houou hand 58",
     "tags": [
       "closed",
@@ -4765,23 +4986,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Ittsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Full straight"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -4794,7 +5020,7 @@
     }
   },
   {
-    "id": "tenhou-houou-429b3537a1cc",
+    "id": "tenhou-houou-fbaf27a58665",
     "title": "Tenhou Houou hand 59",
     "tags": [
       "chiitoitsu",
@@ -4841,11 +5067,13 @@
       "yaku": [
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -4858,7 +5086,7 @@
     }
   },
   {
-    "id": "tenhou-houou-e1e645573b3b",
+    "id": "tenhou-houou-7e17ccd299f8",
     "title": "Tenhou Houou hand 60",
     "tags": [
       "fu=40",
@@ -4919,7 +5147,8 @@
       "yaku": [
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         }
       ],
       "fuBreakdown": [
@@ -4931,17 +5160,20 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "9-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         },
         {
           "name": "Tsumo",
@@ -4952,7 +5184,7 @@
     }
   },
   {
-    "id": "tenhou-houou-1cd269cec353",
+    "id": "tenhou-houou-0170837bd393",
     "title": "Tenhou Houou hand 61",
     "tags": [
       "closed",
@@ -5004,15 +5236,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -5025,7 +5260,7 @@
     }
   },
   {
-    "id": "tenhou-houou-7876cd13450a",
+    "id": "tenhou-houou-de0e25c1a266",
     "title": "Tenhou Houou hand 62",
     "tags": [
       "dora-heavy",
@@ -5098,22 +5333,26 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind east"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         },
         {
           "name": "Dora",
-          "han": 5
+          "han": 5,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "East kan"
         },
         {
           "name": "Base fu",
@@ -5123,18 +5362,20 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-man wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-01f30a23ccfe",
+    "id": "tenhou-houou-415af8283dfc",
     "title": "Tenhou Houou hand 63",
     "tags": [
       "dora",
@@ -5189,11 +5430,13 @@
       "yaku": [
         {
           "name": "Sanshoku Doujun",
-          "han": 1
+          "han": 1,
+          "englishName": "Mixed triple sequence"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -5205,13 +5448,14 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "2-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-68998d3d62c0",
+    "id": "tenhou-houou-5a4b45537336",
     "title": "Tenhou Houou hand 64",
     "tags": [
       "closed",
@@ -5259,7 +5503,8 @@
       "yaku": [
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -5276,18 +5521,20 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "8-sou triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "6-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-7ecebc57e6c6",
+    "id": "tenhou-houou-c60b3b4a22d4",
     "title": "Tenhou Houou hand 65",
     "tags": [
       "closed",
@@ -5338,19 +5585,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -5363,7 +5614,7 @@
     }
   },
   {
-    "id": "tenhou-houou-4bc3a3983e49",
+    "id": "tenhou-houou-2a7ffb7706c2",
     "title": "Tenhou Houou hand 66",
     "tags": [
       "closed",
@@ -5411,11 +5662,13 @@
       "yaku": [
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -5432,13 +5685,14 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-bd2c19c6e896",
+    "id": "tenhou-houou-2d161b62a50d",
     "title": "Tenhou Houou hand 67",
     "tags": [
       "fu=40",
@@ -5498,7 +5752,8 @@
       "yaku": [
         {
           "name": "Daisangen",
-          "han": 13
+          "han": 13,
+          "englishName": "Big three dragons"
         }
       ],
       "fuBreakdown": [
@@ -5510,23 +5765,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-db170b4bf0c2",
+    "id": "tenhou-houou-2b780007eccd",
     "title": "Tenhou Houou hand 68",
     "tags": [
       "closed",
@@ -5577,19 +5835,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -5602,7 +5864,7 @@
     }
   },
   {
-    "id": "tenhou-houou-197ec166a3b8",
+    "id": "tenhou-houou-307b0b1de2d1",
     "title": "Tenhou Houou hand 69",
     "tags": [
       "closed",
@@ -5656,11 +5918,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -5677,28 +5941,32 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-pin triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "4-man triplet"
         },
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-man wait"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-e8b0c52e99a9",
+    "id": "tenhou-houou-be21a8ed5726",
     "title": "Tenhou Houou hand 70",
     "tags": [
       "fu=30",
@@ -5766,7 +6034,8 @@
       "yaku": [
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         }
       ],
       "fuBreakdown": [
@@ -5778,18 +6047,20 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "2-man triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-ffd3241d0600",
+    "id": "tenhou-houou-45950c972359",
     "title": "Tenhou Houou hand 71",
     "tags": [
       "closed",
@@ -5853,22 +6124,26 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "1-sou kan"
         },
         {
           "name": "Base fu",
@@ -5884,7 +6159,7 @@
     }
   },
   {
-    "id": "tenhou-houou-e6195c3060ac",
+    "id": "tenhou-houou-5de13d9558e8",
     "title": "Tenhou Houou hand 72",
     "tags": [
       "chiitoitsu",
@@ -5931,11 +6206,13 @@
       "yaku": [
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -5948,7 +6225,7 @@
     }
   },
   {
-    "id": "tenhou-houou-afbe5921dfbe",
+    "id": "tenhou-houou-9dd65cdff483",
     "title": "Tenhou Houou hand 73",
     "tags": [
       "closed",
@@ -5994,11 +6271,13 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -6011,7 +6290,7 @@
     }
   },
   {
-    "id": "tenhou-houou-82ae5f763197",
+    "id": "tenhou-houou-9c532c20d5a2",
     "title": "Tenhou Houou hand 74",
     "tags": [
       "closed",
@@ -6059,7 +6338,8 @@
       "yaku": [
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -6076,13 +6356,14 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "6-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-33c88eddd74e",
+    "id": "tenhou-houou-43d6eb786cfc",
     "title": "Tenhou Houou hand 75",
     "tags": [
       "closed",
@@ -6133,19 +6414,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Honitsu",
-          "han": 3
+          "han": 3,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -6158,7 +6443,7 @@
     }
   },
   {
-    "id": "tenhou-houou-0a65d1253cad",
+    "id": "tenhou-houou-5bd20981cd29",
     "title": "Tenhou Houou hand 76",
     "tags": [
       "fu=50+",
@@ -6221,14 +6506,16 @@
       "yaku": [
         {
           "name": "Toitoi",
-          "han": 2
+          "han": 2,
+          "englishName": "All triplets"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "East kan"
         },
         {
           "name": "Base fu",
@@ -6238,12 +6525,14 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-pin triplet"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "5-sou triplet"
         },
         {
           "name": "Open triplet",
@@ -6254,7 +6543,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ba210d98ae97",
+    "id": "tenhou-houou-ec606b5f4f7d",
     "title": "Tenhou Houou hand 77",
     "tags": [
       "closed",
@@ -6305,11 +6594,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -6332,7 +6623,7 @@
     }
   },
   {
-    "id": "tenhou-houou-b7be7d00612e",
+    "id": "tenhou-houou-cfdadebc2510",
     "title": "Tenhou Houou hand 78",
     "tags": [
       "closed",
@@ -6383,19 +6674,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -6408,7 +6703,7 @@
     }
   },
   {
-    "id": "tenhou-houou-d32714021a05",
+    "id": "tenhou-houou-c53832c5a623",
     "title": "Tenhou Houou hand 79",
     "tags": [
       "fu=30",
@@ -6470,7 +6765,8 @@
       "yaku": [
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -6482,12 +6778,14 @@
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "4-pin triplet"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "4-man triplet"
         },
         {
           "name": "Tsumo",
@@ -6498,7 +6796,7 @@
     }
   },
   {
-    "id": "tenhou-houou-168f86a6d107",
+    "id": "tenhou-houou-8ba6497bae29",
     "title": "Tenhou Houou hand 80",
     "tags": [
       "dora-heavy",
@@ -6562,23 +6860,28 @@
       "yaku": [
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "Yakuhai (seat wind north)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind north"
         },
         {
           "name": "Toitoi",
-          "han": 2
+          "han": 2,
+          "englishName": "All triplets"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -6590,22 +6893,26 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "4-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "North triplet"
         },
         {
           "name": "Tsumo",
@@ -6616,7 +6923,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ac3771917b46",
+    "id": "tenhou-houou-187b562de543",
     "title": "Tenhou Houou hand 81",
     "tags": [
       "closed",
@@ -6670,15 +6977,18 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (seat wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind south"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -6695,23 +7005,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-sou triplet"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-sou wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-b14e564b0dc1",
+    "id": "tenhou-houou-33b447024dfd",
     "title": "Tenhou Houou hand 82",
     "tags": [
       "closed",
@@ -6757,11 +7070,13 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -6774,7 +7089,7 @@
     }
   },
   {
-    "id": "tenhou-houou-fd132d2fd540",
+    "id": "tenhou-houou-24ef37844675",
     "title": "Tenhou Houou hand 83",
     "tags": [
       "closed",
@@ -6824,7 +7139,8 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -6841,13 +7157,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-sou triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-ea7ead0cb982",
+    "id": "tenhou-houou-8cb864e46efc",
     "title": "Tenhou Houou hand 84",
     "tags": [
       "closed",
@@ -6899,23 +7216,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -6928,7 +7250,7 @@
     }
   },
   {
-    "id": "tenhou-houou-bf0328d30665",
+    "id": "tenhou-houou-6782939ee5df",
     "title": "Tenhou Houou hand 85",
     "tags": [
       "chiitoitsu",
@@ -6976,11 +7298,13 @@
       "yaku": [
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -6993,7 +7317,7 @@
     }
   },
   {
-    "id": "tenhou-houou-8ebbf193f7fc",
+    "id": "tenhou-houou-bfc2d24b1e13",
     "title": "Tenhou Houou hand 86",
     "tags": [
       "dora",
@@ -7067,11 +7391,13 @@
       "yaku": [
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -7083,23 +7409,26 @@
         {
           "name": "Open terminal/honor kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "South kan"
         },
         {
           "name": "Open terminal/honor kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon kan"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "4-man triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-6c69cf9bce47",
+    "id": "tenhou-houou-acb9fcff3755",
     "title": "Tenhou Houou hand 87",
     "tags": [
       "dora-heavy",
@@ -7163,11 +7492,13 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -7179,18 +7510,20 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-6018c80d072a",
+    "id": "tenhou-houou-852c57b57e77",
     "title": "Tenhou Houou hand 88",
     "tags": [
       "closed",
@@ -7237,15 +7570,18 @@
       "yaku": [
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Ittsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Full straight"
         },
         {
           "name": "Honitsu",
-          "han": 3
+          "han": 3,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -7262,13 +7598,14 @@
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "East pair (round wind)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-da37c170b71e",
+    "id": "tenhou-houou-b48b3f10fc1d",
     "title": "Tenhou Houou hand 89",
     "tags": [
       "closed",
@@ -7316,19 +7653,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -7341,7 +7682,7 @@
     }
   },
   {
-    "id": "tenhou-houou-e11307e24190",
+    "id": "tenhou-houou-e47496453d14",
     "title": "Tenhou Houou hand 90",
     "tags": [
       "fu=40",
@@ -7410,7 +7751,8 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         }
       ],
       "fuBreakdown": [
@@ -7422,17 +7764,20 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Green dragon pair (dragon)"
         },
         {
           "name": "Tsumo",
@@ -7443,7 +7788,7 @@
     }
   },
   {
-    "id": "tenhou-houou-b2f2fdada677",
+    "id": "tenhou-houou-6367519cea14",
     "title": "Tenhou Houou hand 91",
     "tags": [
       "closed",
@@ -7493,15 +7838,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -7514,7 +7862,7 @@
     }
   },
   {
-    "id": "tenhou-houou-42a82a4162c5",
+    "id": "tenhou-houou-f57e98c7b6b0",
     "title": "Tenhou Houou hand 92",
     "tags": [
       "flush/half-flush",
@@ -7586,23 +7934,28 @@
       "yaku": [
         {
           "name": "Yakuhai (seat wind west)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind west"
         },
         {
           "name": "Yakuhai (round wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind east"
         },
         {
           "name": "Honroutou",
-          "han": 2
+          "han": 2,
+          "englishName": "All terminals and honors"
         },
         {
           "name": "Toitoi",
-          "han": 2
+          "han": 2,
+          "englishName": "All triplets"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -7614,33 +7967,38 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "9-pin triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "1-pin triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "South wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-aa977a9585ba",
+    "id": "tenhou-houou-8c412e010266",
     "title": "Tenhou Houou hand 93",
     "tags": [
       "closed",
@@ -7691,11 +8049,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -7712,13 +8072,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-sou triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-b32f079d475d",
+    "id": "tenhou-houou-bb14c08b9d46",
     "title": "Tenhou Houou hand 94",
     "tags": [
       "closed",
@@ -7769,19 +8130,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -7794,7 +8159,7 @@
     }
   },
   {
-    "id": "tenhou-houou-bb402ddbfb1e",
+    "id": "tenhou-houou-18e829f56ed0",
     "title": "Tenhou Houou hand 95",
     "tags": [
       "fu=30",
@@ -7848,7 +8213,8 @@
       "yaku": [
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         }
       ],
       "fuBreakdown": [
@@ -7860,13 +8226,14 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-00a581b70b55",
+    "id": "tenhou-houou-968986fe600d",
     "title": "Tenhou Houou hand 96",
     "tags": [
       "dora",
@@ -7939,22 +8306,26 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Yakuhai (seat wind west)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind west"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon kan"
         },
         {
           "name": "Base fu",
@@ -7964,23 +8335,26 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon pair (dragon)"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-746778ec41e1",
+    "id": "tenhou-houou-4c678821ab19",
     "title": "Tenhou Houou hand 97",
     "tags": [
       "closed",
@@ -8033,19 +8407,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (round wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind east"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -8057,12 +8435,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "4-pin wait"
         },
         {
           "name": "Tsumo",
@@ -8073,7 +8453,7 @@
     }
   },
   {
-    "id": "tenhou-houou-22d625591ffc",
+    "id": "tenhou-houou-21bf9cee0d31",
     "title": "Tenhou Houou hand 98",
     "tags": [
       "chiitoitsu",
@@ -8119,7 +8499,8 @@
       "yaku": [
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         }
       ],
       "fuBreakdown": [
@@ -8132,7 +8513,7 @@
     }
   },
   {
-    "id": "tenhou-houou-08d81534330c",
+    "id": "tenhou-houou-d951fd95ffc7",
     "title": "Tenhou Houou hand 99",
     "tags": [
       "closed",
@@ -8182,7 +8563,8 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -8199,13 +8581,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-pin triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-cce5c2a2ecbe",
+    "id": "tenhou-houou-b17738b28299",
     "title": "Tenhou Houou hand 100",
     "tags": [
       "closed",
@@ -8255,15 +8638,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -8276,7 +8662,7 @@
     }
   },
   {
-    "id": "tenhou-houou-0b2b31957406",
+    "id": "tenhou-houou-653c19be3466",
     "title": "Tenhou Houou hand 101",
     "tags": [
       "closed",
@@ -8328,23 +8714,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Yakuhai (seat wind north)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind north"
         },
         {
           "name": "San Ankou",
-          "han": 2
+          "han": 2,
+          "englishName": "Three concealed triplets"
         }
       ],
       "fuBreakdown": [
@@ -8356,17 +8747,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "North triplet"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "6-sou triplet"
         },
         {
           "name": "Tsumo",
@@ -8377,7 +8771,7 @@
     }
   },
   {
-    "id": "tenhou-houou-15b140f184f1",
+    "id": "tenhou-houou-9008c0ed9698",
     "title": "Tenhou Houou hand 102",
     "tags": [
       "closed",
@@ -8424,15 +8818,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -8445,7 +8842,7 @@
     }
   },
   {
-    "id": "tenhou-houou-e3dcddfedf17",
+    "id": "tenhou-houou-124dc5c93b8f",
     "title": "Tenhou Houou hand 103",
     "tags": [
       "closed",
@@ -8495,11 +8892,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -8517,7 +8916,7 @@
     }
   },
   {
-    "id": "tenhou-houou-bd912723dd8b",
+    "id": "tenhou-houou-e3c392658387",
     "title": "Tenhou Houou hand 104",
     "tags": [
       "closed",
@@ -8567,7 +8966,8 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -8584,13 +8984,14 @@
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Red dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-ad2cce091035",
+    "id": "tenhou-houou-138ec019b319",
     "title": "Tenhou Houou hand 105",
     "tags": [
       "closed",
@@ -8642,27 +9043,33 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -8675,7 +9082,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ed0776e2b7ba",
+    "id": "tenhou-houou-520c67a91182",
     "title": "Tenhou Houou hand 106",
     "tags": [
       "closed",
@@ -8726,11 +9133,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -8747,7 +9156,8 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "6-man triplet"
         },
         {
           "name": "Open triplet",
@@ -8758,7 +9168,7 @@
     }
   },
   {
-    "id": "tenhou-houou-96a21715cd28",
+    "id": "tenhou-houou-0cc86a16c562",
     "title": "Tenhou Houou hand 107",
     "tags": [
       "flush/half-flush",
@@ -8830,11 +9240,13 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -8846,12 +9258,14 @@
         {
           "name": "Open terminal/honor kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon kan"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "West triplet"
         },
         {
           "name": "Tsumo",
@@ -8862,7 +9276,7 @@
     }
   },
   {
-    "id": "tenhou-houou-3cb5ee5876ca",
+    "id": "tenhou-houou-a54af023dff7",
     "title": "Tenhou Houou hand 108",
     "tags": [
       "closed",
@@ -8913,19 +9327,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -8938,7 +9356,7 @@
     }
   },
   {
-    "id": "tenhou-houou-11b81fa312e1",
+    "id": "tenhou-houou-6f1a0e8231ec",
     "title": "Tenhou Houou hand 109",
     "tags": [
       "closed",
@@ -8988,7 +9406,8 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -9005,13 +9424,14 @@
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Green dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-8f3a0546f0d3",
+    "id": "tenhou-houou-32f2804b857f",
     "title": "Tenhou Houou hand 110",
     "tags": [
       "closed",
@@ -9062,19 +9482,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -9087,7 +9511,7 @@
     }
   },
   {
-    "id": "tenhou-houou-b38840d65d81",
+    "id": "tenhou-houou-4e377ab1efde",
     "title": "Tenhou Houou hand 111",
     "tags": [
       "chiitoitsu",
@@ -9133,7 +9557,8 @@
       "yaku": [
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         }
       ],
       "fuBreakdown": [
@@ -9146,7 +9571,7 @@
     }
   },
   {
-    "id": "tenhou-houou-cd76a839fe87",
+    "id": "tenhou-houou-2836d213a8ef",
     "title": "Tenhou Houou hand 112",
     "tags": [
       "closed",
@@ -9198,19 +9623,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -9222,7 +9651,8 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Tsumo",
@@ -9233,7 +9663,7 @@
     }
   },
   {
-    "id": "tenhou-houou-a21d1c988721",
+    "id": "tenhou-houou-6ba1ff5bd18c",
     "title": "Tenhou Houou hand 113",
     "tags": [
       "dora-heavy",
@@ -9288,11 +9718,13 @@
       "yaku": [
         {
           "name": "Chantai",
-          "han": 1
+          "han": 1,
+          "englishName": "Outside hand"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -9304,23 +9736,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "North triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "1-sou triplet"
         },
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-c1454f18102d",
+    "id": "tenhou-houou-731d6dabe8c3",
     "title": "Tenhou Houou hand 114",
     "tags": [
       "closed",
@@ -9371,19 +9806,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -9396,7 +9835,7 @@
     }
   },
   {
-    "id": "tenhou-houou-25190fb2a680",
+    "id": "tenhou-houou-d3d550993381",
     "title": "Tenhou Houou hand 115",
     "tags": [
       "closed",
@@ -9448,7 +9887,8 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -9465,12 +9905,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-sou triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Red dragon pair (dragon)"
         },
         {
           "name": "Open triplet",
@@ -9481,7 +9923,7 @@
     }
   },
   {
-    "id": "tenhou-houou-e24aa57c58b8",
+    "id": "tenhou-houou-59e8be5e0a8c",
     "title": "Tenhou Houou hand 116",
     "tags": [
       "closed",
@@ -9534,11 +9976,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         }
       ],
       "fuBreakdown": [
@@ -9555,7 +9999,8 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-sou triplet"
         },
         {
           "name": "Open terminal/honor triplet",
@@ -9566,7 +10011,7 @@
     }
   },
   {
-    "id": "tenhou-houou-7952471ec08e",
+    "id": "tenhou-houou-cb1e293651ac",
     "title": "Tenhou Houou hand 117",
     "tags": [
       "closed",
@@ -9616,15 +10061,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -9637,7 +10085,7 @@
     }
   },
   {
-    "id": "tenhou-houou-9ca88236ab6c",
+    "id": "tenhou-houou-70e618f924c7",
     "title": "Tenhou Houou hand 118",
     "tags": [
       "closed",
@@ -9699,22 +10147,26 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "West kan"
         },
         {
           "name": "Base fu",
@@ -9730,7 +10182,7 @@
     }
   },
   {
-    "id": "tenhou-houou-f12aca92c77d",
+    "id": "tenhou-houou-42117054f957",
     "title": "Tenhou Houou hand 119",
     "tags": [
       "fu=30",
@@ -9790,7 +10242,8 @@
       "yaku": [
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -9808,7 +10261,7 @@
     }
   },
   {
-    "id": "tenhou-houou-36e55ed546ea",
+    "id": "tenhou-houou-736c174dcda9",
     "title": "Tenhou Houou hand 120",
     "tags": [
       "closed",
@@ -9859,11 +10312,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -9886,7 +10341,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ba4694b0e907",
+    "id": "tenhou-houou-a619e6bfba61",
     "title": "Tenhou Houou hand 121",
     "tags": [
       "closed",
@@ -9936,15 +10391,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -9957,7 +10415,7 @@
     }
   },
   {
-    "id": "tenhou-houou-f0c129d45390",
+    "id": "tenhou-houou-a5e69b47295c",
     "title": "Tenhou Houou hand 122",
     "tags": [
       "chiitoitsu",
@@ -10009,19 +10467,23 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Chiitoitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Seven pairs"
         },
         {
           "name": "Honitsu",
-          "han": 3
+          "han": 3,
+          "englishName": "Half flush"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -10034,7 +10496,7 @@
     }
   },
   {
-    "id": "tenhou-houou-3c0f89cd2917",
+    "id": "tenhou-houou-62d61c90b8ad",
     "title": "Tenhou Houou hand 123",
     "tags": [
       "closed",
@@ -10082,7 +10544,8 @@
       "yaku": [
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -10099,18 +10562,20 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-man triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-1cdebd15978a",
+    "id": "tenhou-houou-64d23445d8ed",
     "title": "Tenhou Houou hand 124",
     "tags": [
       "closed",
@@ -10160,19 +10625,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         }
       ],
       "fuBreakdown": [
@@ -10185,7 +10654,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ce8b24136402",
+    "id": "tenhou-houou-9c5330a74a43",
     "title": "Tenhou Houou hand 125",
     "tags": [
       "closed",
@@ -10244,15 +10713,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -10264,17 +10736,20 @@
         {
           "name": "Closed kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "6-sou kan"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-sou triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "5-pin wait"
         },
         {
           "name": "Tsumo",
@@ -10285,7 +10760,7 @@
     }
   },
   {
-    "id": "tenhou-houou-6795710d1fdb",
+    "id": "tenhou-houou-929ce558b871",
     "title": "Tenhou Houou hand 126",
     "tags": [
       "closed",
@@ -10333,11 +10808,13 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         }
       ],
       "fuBreakdown": [
@@ -10349,12 +10826,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "6-sou wait"
         },
         {
           "name": "Tsumo",
@@ -10365,7 +10844,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ee8f1a850416",
+    "id": "tenhou-houou-126f0a8e8470",
     "title": "Tenhou Houou hand 127",
     "tags": [
       "closed",
@@ -10416,23 +10895,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -10445,7 +10929,7 @@
     }
   },
   {
-    "id": "tenhou-houou-6e92814e3a11",
+    "id": "tenhou-houou-f7c527bfb842",
     "title": "Tenhou Houou hand 128",
     "tags": [
       "closed",
@@ -10493,19 +10977,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Yakuhai (seat wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind east"
         },
         {
           "name": "Yakuhai (round wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind east"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -10517,7 +11005,8 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Tsumo",
@@ -10528,7 +11017,7 @@
     }
   },
   {
-    "id": "tenhou-houou-a84447bc7225",
+    "id": "tenhou-houou-b6272e9b03d8",
     "title": "Tenhou Houou hand 129",
     "tags": [
       "closed",
@@ -10575,7 +11064,8 @@
       "yaku": [
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         }
       ],
       "fuBreakdown": [
@@ -10592,13 +11082,14 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-sou wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-23fa016d00ed",
+    "id": "tenhou-houou-88e0bb6c0581",
     "title": "Tenhou Houou hand 130",
     "tags": [
       "closed",
@@ -10648,15 +11139,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -10669,7 +11163,7 @@
     }
   },
   {
-    "id": "tenhou-houou-f97f39d9b933",
+    "id": "tenhou-houou-5faaed19c297",
     "title": "Tenhou Houou hand 131",
     "tags": [
       "closed",
@@ -10732,26 +11226,31 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon kan"
         },
         {
           "name": "Base fu",
@@ -10767,7 +11266,7 @@
     }
   },
   {
-    "id": "tenhou-houou-1986b36285da",
+    "id": "tenhou-houou-b2ec6a62cbee",
     "title": "Tenhou Houou hand 132",
     "tags": [
       "closed",
@@ -10815,11 +11314,13 @@
       "yaku": [
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         }
       ],
       "fuBreakdown": [
@@ -10836,18 +11337,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "6-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-1228b6d9a884",
+    "id": "tenhou-houou-9ce0cb95ee25",
     "title": "Tenhou Houou hand 133",
     "tags": [
       "closed",
@@ -10897,7 +11400,8 @@
       "yaku": [
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         }
       ],
       "fuBreakdown": [
@@ -10914,23 +11418,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "6-man wait"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-7a1eeb60dd77",
+    "id": "tenhou-houou-7152d234e607",
     "title": "Tenhou Houou hand 134",
     "tags": [
       "closed",
@@ -10977,15 +11484,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -10998,7 +11508,7 @@
     }
   },
   {
-    "id": "tenhou-houou-167ede23ab1b",
+    "id": "tenhou-houou-2303f86055f3",
     "title": "Tenhou Houou hand 135",
     "tags": [
       "closed",
@@ -11047,23 +11557,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "Honitsu",
-          "han": 3
+          "han": 3,
+          "englishName": "Half flush"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -11075,7 +11590,8 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         },
         {
           "name": "Tsumo",
@@ -11086,7 +11602,7 @@
     }
   },
   {
-    "id": "tenhou-houou-baf2c590da3a",
+    "id": "tenhou-houou-1539ea06a3eb",
     "title": "Tenhou Houou hand 136",
     "tags": [
       "closed",
@@ -11136,11 +11652,13 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -11152,12 +11670,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-sou triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "3-man triplet"
         },
         {
           "name": "Tsumo",
@@ -11168,7 +11688,7 @@
     }
   },
   {
-    "id": "tenhou-houou-d7b67ab6314f",
+    "id": "tenhou-houou-61b720fed00f",
     "title": "Tenhou Houou hand 137",
     "tags": [
       "closed",
@@ -11221,19 +11741,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -11246,7 +11770,7 @@
     }
   },
   {
-    "id": "tenhou-houou-de426b1de408",
+    "id": "tenhou-houou-6458d7e356d4",
     "title": "Tenhou Houou hand 138",
     "tags": [
       "closed",
@@ -11294,7 +11818,8 @@
       "yaku": [
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -11311,13 +11836,14 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-f4ce712984ec",
+    "id": "tenhou-houou-76754ebd5996",
     "title": "Tenhou Houou hand 139",
     "tags": [
       "closed",
@@ -11367,15 +11893,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -11388,7 +11917,7 @@
     }
   },
   {
-    "id": "tenhou-houou-49a17f1f40dd",
+    "id": "tenhou-houou-3ae9191921e6",
     "title": "Tenhou Houou hand 140",
     "tags": [
       "closed",
@@ -11441,15 +11970,18 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "San Ankou",
-          "han": 2
+          "han": 2,
+          "englishName": "Three concealed triplets"
         },
         {
           "name": "Dora",
-          "han": 4
+          "han": 4,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -11466,28 +11998,32 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "3-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-sou triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "8-man wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-e6679541566d",
+    "id": "tenhou-houou-ffa81f9f4bb7",
     "title": "Tenhou Houou hand 141",
     "tags": [
       "closed",
@@ -11534,7 +12070,8 @@
       "yaku": [
         {
           "name": "Ittsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Full straight"
         }
       ],
       "fuBreakdown": [
@@ -11551,18 +12088,20 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "5-pin triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "8-sou wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-554dd944fdf5",
+    "id": "tenhou-houou-de1690276182",
     "title": "Tenhou Houou hand 142",
     "tags": [
       "closed",
@@ -11613,19 +12152,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -11638,7 +12181,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ce4794aa1bf1",
+    "id": "tenhou-houou-d0228b949484",
     "title": "Tenhou Houou hand 143",
     "tags": [
       "dealer",
@@ -11699,7 +12242,8 @@
       "yaku": [
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -11711,12 +12255,14 @@
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "6-sou triplet"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "8-sou triplet"
         },
         {
           "name": "Open triplet",
@@ -11727,7 +12273,7 @@
     }
   },
   {
-    "id": "tenhou-houou-fdb00797680a",
+    "id": "tenhou-houou-2fe074b83bd5",
     "title": "Tenhou Houou hand 144",
     "tags": [
       "closed",
@@ -11790,11 +12336,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -11811,23 +12359,26 @@
         {
           "name": "Closed kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "7-man kan"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "6-man triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-eaedc20a3d93",
+    "id": "tenhou-houou-0bb47a2e0547",
     "title": "Tenhou Houou hand 145",
     "tags": [
       "closed",
@@ -11879,11 +12430,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Chantai",
-          "han": 2
+          "han": 2,
+          "englishName": "Outside hand"
         }
       ],
       "fuBreakdown": [
@@ -11900,18 +12453,20 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "8-man wait"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "East pair (seat wind)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-023f2904cd83",
+    "id": "tenhou-houou-a7d0d9778b7c",
     "title": "Tenhou Houou hand 146",
     "tags": [
       "closed",
@@ -11957,11 +12512,13 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -11974,7 +12531,7 @@
     }
   },
   {
-    "id": "tenhou-houou-71c03df04451",
+    "id": "tenhou-houou-8e4a9a3ae029",
     "title": "Tenhou Houou hand 147",
     "tags": [
       "dealer",
@@ -12028,7 +12585,8 @@
       "yaku": [
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         }
       ],
       "fuBreakdown": [
@@ -12040,23 +12598,26 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "3-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-sou triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-83d9a97191fe",
+    "id": "tenhou-houou-0b04075e98ed",
     "title": "Tenhou Houou hand 148",
     "tags": [
       "closed",
@@ -12107,23 +12668,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Sanshoku Doujun",
-          "han": 2
+          "han": 2,
+          "englishName": "Mixed triple sequence"
         },
         {
           "name": "Chantai",
-          "han": 2
+          "han": 2,
+          "englishName": "Outside hand"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -12135,7 +12701,8 @@
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-sou wait"
         },
         {
           "name": "Tsumo",
@@ -12146,7 +12713,7 @@
     }
   },
   {
-    "id": "tenhou-houou-b3c0356bf770",
+    "id": "tenhou-houou-4d2b98780f27",
     "title": "Tenhou Houou hand 149",
     "tags": [
       "closed",
@@ -12196,15 +12763,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -12217,7 +12787,7 @@
     }
   },
   {
-    "id": "tenhou-houou-f83adbf3cccf",
+    "id": "tenhou-houou-b30740aaef92",
     "title": "Tenhou Houou hand 150",
     "tags": [
       "dora",
@@ -12290,11 +12860,13 @@
       "yaku": [
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -12306,22 +12878,26 @@
         {
           "name": "Open terminal/honor kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon kan"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "1-sou triplet"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "9-sou wait"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "8-pin triplet"
         },
         {
           "name": "Tsumo",
@@ -12332,7 +12908,7 @@
     }
   },
   {
-    "id": "tenhou-houou-25b17944c928",
+    "id": "tenhou-houou-f22e8648be64",
     "title": "Tenhou Houou hand 151",
     "tags": [
       "fu=40",
@@ -12386,7 +12962,8 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         }
       ],
       "fuBreakdown": [
@@ -12398,18 +12975,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-man triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-487c2ba6fa87",
+    "id": "tenhou-houou-59b5168c9e2b",
     "title": "Tenhou Houou hand 152",
     "tags": [
       "closed",
@@ -12460,19 +13039,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -12485,7 +13068,7 @@
     }
   },
   {
-    "id": "tenhou-houou-74ab224b4ddc",
+    "id": "tenhou-houou-c14b0185cbbc",
     "title": "Tenhou Houou hand 153",
     "tags": [
       "dora-heavy",
@@ -12541,15 +13124,18 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -12561,17 +13147,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "8-man triplet"
         },
         {
           "name": "Tsumo",
@@ -12582,7 +13171,7 @@
     }
   },
   {
-    "id": "tenhou-houou-42c636e52bbe",
+    "id": "tenhou-houou-9bdfdd3e31eb",
     "title": "Tenhou Houou hand 154",
     "tags": [
       "closed",
@@ -12632,15 +13221,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -12653,7 +13245,7 @@
     }
   },
   {
-    "id": "tenhou-houou-16b29646f513",
+    "id": "tenhou-houou-f6c6b340ef23",
     "title": "Tenhou Houou hand 155",
     "tags": [
       "closed",
@@ -12705,11 +13297,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         }
       ],
       "fuBreakdown": [
@@ -12726,18 +13320,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "9-pin triplet"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-6f552b45febe",
+    "id": "tenhou-houou-7dab1e2b303d",
     "title": "Tenhou Houou hand 156",
     "tags": [
       "closed",
@@ -12788,7 +13384,8 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -12805,18 +13402,20 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "6-pin triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "5-pin wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-c55df5756857",
+    "id": "tenhou-houou-b6361e71b72e",
     "title": "Tenhou Houou hand 157",
     "tags": [
       "fu=50+",
@@ -12889,15 +13488,18 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Yakuhai (round wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind east"
         },
         {
           "name": "Toitoi",
-          "han": 2
+          "han": 2,
+          "englishName": "All triplets"
         }
       ],
       "fuBreakdown": [
@@ -12909,27 +13511,32 @@
         {
           "name": "Open terminal/honor kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "9-pin kan"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon pair (dragon)"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "6-sou triplet"
         },
         {
           "name": "Tsumo",
@@ -12940,7 +13547,7 @@
     }
   },
   {
-    "id": "tenhou-houou-acba2c8300ad",
+    "id": "tenhou-houou-b372aaa3dd25",
     "title": "Tenhou Houou hand 158",
     "tags": [
       "closed",
@@ -12990,15 +13597,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -13011,7 +13621,7 @@
     }
   },
   {
-    "id": "tenhou-houou-c0652776236a",
+    "id": "tenhou-houou-454aa830f393",
     "title": "Tenhou Houou hand 159",
     "tags": [
       "closed",
@@ -13061,11 +13671,13 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         }
       ],
       "fuBreakdown": [
@@ -13077,7 +13689,8 @@
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Red dragon pair (dragon)"
         },
         {
           "name": "Tsumo",
@@ -13088,7 +13701,7 @@
     }
   },
   {
-    "id": "tenhou-houou-7bda52db1aa9",
+    "id": "tenhou-houou-37f6f25a3c86",
     "title": "Tenhou Houou hand 160",
     "tags": [
       "dealer",
@@ -13144,23 +13757,28 @@
       "yaku": [
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "Yakuhai (seat wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind east"
         },
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -13172,12 +13790,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
@@ -13188,7 +13808,7 @@
     }
   },
   {
-    "id": "tenhou-houou-1ded44ba3ec1",
+    "id": "tenhou-houou-b70fcf170250",
     "title": "Tenhou Houou hand 161",
     "tags": [
       "closed",
@@ -13239,19 +13859,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -13264,7 +13888,7 @@
     }
   },
   {
-    "id": "tenhou-houou-f89cd0f6a056",
+    "id": "tenhou-houou-1ce06f2147eb",
     "title": "Tenhou Houou hand 162",
     "tags": [
       "fu=40",
@@ -13326,7 +13950,8 @@
       "yaku": [
         {
           "name": "Yakuhai (seat wind north)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind north"
         }
       ],
       "fuBreakdown": [
@@ -13338,28 +13963,32 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-pin triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "North triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "8-sou wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-3e40a00061c8",
+    "id": "tenhou-houou-3f2e4f418f9e",
     "title": "Tenhou Houou hand 163",
     "tags": [
       "closed",
@@ -13409,15 +14038,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         }
       ],
       "fuBreakdown": [
@@ -13430,7 +14062,7 @@
     }
   },
   {
-    "id": "tenhou-houou-7000d980d435",
+    "id": "tenhou-houou-a65e6d527fd7",
     "title": "Tenhou Houou hand 164",
     "tags": [
       "closed",
@@ -13477,7 +14109,8 @@
       "yaku": [
         {
           "name": "San Ankou",
-          "han": 2
+          "han": 2,
+          "englishName": "Three concealed triplets"
         }
       ],
       "fuBreakdown": [
@@ -13494,23 +14127,26 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "2-pin triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-pin triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-93064b8332bc",
+    "id": "tenhou-houou-24e752c05c9a",
     "title": "Tenhou Houou hand 165",
     "tags": [
       "closed",
@@ -13562,23 +14198,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -13590,7 +14231,8 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Tsumo",
@@ -13601,7 +14243,7 @@
     }
   },
   {
-    "id": "tenhou-houou-616db3a6111c",
+    "id": "tenhou-houou-6242ca1d87dd",
     "title": "Tenhou Houou hand 166",
     "tags": [
       "fu=40",
@@ -13655,7 +14297,8 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         }
       ],
       "fuBreakdown": [
@@ -13667,7 +14310,8 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-sou triplet"
         },
         {
           "name": "Open terminal/honor triplet",
@@ -13677,13 +14321,14 @@
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "3-pin triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-fa78d3fe1e29",
+    "id": "tenhou-houou-c03eea8e3b15",
     "title": "Tenhou Houou hand 167",
     "tags": [
       "closed",
@@ -13734,19 +14379,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         }
       ],
       "fuBreakdown": [
@@ -13759,7 +14408,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ee21ca3caa12",
+    "id": "tenhou-houou-42c93ad65168",
     "title": "Tenhou Houou hand 168",
     "tags": [
       "flush/half-flush",
@@ -13822,11 +14471,13 @@
       "yaku": [
         {
           "name": "Yakuhai (seat wind north)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind north"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -13838,23 +14489,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "North triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-sou wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-c6441b2b1e49",
+    "id": "tenhou-houou-de5eb7fac778",
     "title": "Tenhou Houou hand 169",
     "tags": [
       "dealer",
@@ -13920,18 +14574,21 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "South kan"
         },
         {
           "name": "Base fu",
@@ -13941,18 +14598,20 @@
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "East pair (seat wind)"
         },
         {
           "name": "Pair wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "East wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-55e38fd5d3bf",
+    "id": "tenhou-houou-10155c70a3d6",
     "title": "Tenhou Houou hand 170",
     "tags": [
       "closed",
@@ -14001,15 +14660,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Dora",
-          "han": 6
+          "han": 6,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -14021,12 +14683,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "4-man triplet"
         },
         {
           "name": "Tsumo",
@@ -14037,7 +14701,7 @@
     }
   },
   {
-    "id": "tenhou-houou-abad2fb9045d",
+    "id": "tenhou-houou-a4e0e2d6f013",
     "title": "Tenhou Houou hand 171",
     "tags": [
       "closed",
@@ -14088,23 +14752,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Sanshoku Doujun",
-          "han": 2
+          "han": 2,
+          "englishName": "Mixed triple sequence"
         }
       ],
       "fuBreakdown": [
@@ -14117,7 +14786,7 @@
     }
   },
   {
-    "id": "tenhou-houou-0b0f1c941cde",
+    "id": "tenhou-houou-43cb7c9d5b3c",
     "title": "Tenhou Houou hand 172",
     "tags": [
       "closed",
@@ -14179,22 +14848,26 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
         {
           "name": "Closed terminal/honor kan",
           "fu": 32,
-          "category": "group"
+          "category": "group",
+          "context": "East kan"
         },
         {
           "name": "Base fu",
@@ -14210,7 +14883,7 @@
     }
   },
   {
-    "id": "tenhou-houou-0789067fbda5",
+    "id": "tenhou-houou-25d4e5560c3e",
     "title": "Tenhou Houou hand 173",
     "tags": [
       "dora-heavy",
@@ -14273,11 +14946,13 @@
       "yaku": [
         {
           "name": "Chinitsu",
-          "han": 5
+          "han": 5,
+          "englishName": "Full flush"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -14289,18 +14964,20 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "2-sou wait"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "8-sou triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-b9421563d7ff",
+    "id": "tenhou-houou-ed2255087205",
     "title": "Tenhou Houou hand 174",
     "tags": [
       "closed",
@@ -14351,23 +15028,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Sanshoku Doujun",
-          "han": 2
+          "han": 2,
+          "englishName": "Mixed triple sequence"
         }
       ],
       "fuBreakdown": [
@@ -14380,7 +15062,7 @@
     }
   },
   {
-    "id": "tenhou-houou-40889d4eea1d",
+    "id": "tenhou-houou-b73479b6116a",
     "title": "Tenhou Houou hand 175",
     "tags": [
       "closed",
@@ -14430,11 +15112,13 @@
       "yaku": [
         {
           "name": "Ittsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Full straight"
         },
         {
           "name": "Honitsu",
-          "han": 3
+          "han": 3,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -14456,18 +15140,20 @@
         {
           "name": "Penchan - Edge Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-man wait"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "West pair (seat wind)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-4cbdae788443",
+    "id": "tenhou-houou-91da4668ecee",
     "title": "Tenhou Houou hand 176",
     "tags": [
       "flush/half-flush",
@@ -14531,19 +15217,23 @@
       "yaku": [
         {
           "name": "Yakuhai (seat wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind south"
         },
         {
           "name": "Yakuhai (round wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind east"
         },
         {
           "name": "Toitoi",
-          "han": 2
+          "han": 2,
+          "englishName": "All triplets"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -14555,22 +15245,26 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "3-pin triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon pair (dragon)"
         },
         {
           "name": "Open triplet",
@@ -14581,7 +15275,7 @@
     }
   },
   {
-    "id": "tenhou-houou-e12f85c9db53",
+    "id": "tenhou-houou-d812bf784700",
     "title": "Tenhou Houou hand 177",
     "tags": [
       "dealer",
@@ -14636,15 +15330,18 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -14656,23 +15353,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-845961aae381",
+    "id": "tenhou-houou-e7e87832339c",
     "title": "Tenhou Houou hand 178",
     "tags": [
       "closed",
@@ -14723,19 +15423,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -14748,7 +15452,7 @@
     }
   },
   {
-    "id": "tenhou-houou-e316b05b941a",
+    "id": "tenhou-houou-b816f6c52ec6",
     "title": "Tenhou Houou hand 179",
     "tags": [
       "closed",
@@ -14798,11 +15502,13 @@
       "yaku": [
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -14819,23 +15525,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-sou triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "2-sou wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-62898c0e5c29",
+    "id": "tenhou-houou-68c3acfc9203",
     "title": "Tenhou Houou hand 180",
     "tags": [
       "closed",
@@ -14886,19 +15595,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -14911,7 +15624,7 @@
     }
   },
   {
-    "id": "tenhou-houou-cf24cdc997fa",
+    "id": "tenhou-houou-57dec379e0dd",
     "title": "Tenhou Houou hand 181",
     "tags": [
       "flush/half-flush",
@@ -14973,15 +15686,18 @@
       "yaku": [
         {
           "name": "Yakuhai (seat wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind south"
         },
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -14993,18 +15709,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "North triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-a120431516e1",
+    "id": "tenhou-houou-eb397990b024",
     "title": "Tenhou Houou hand 182",
     "tags": [
       "closed",
@@ -15057,23 +15775,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -15085,7 +15808,8 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-man wait"
         },
         {
           "name": "Tsumo",
@@ -15096,7 +15820,7 @@
     }
   },
   {
-    "id": "tenhou-houou-7b61c97121e0",
+    "id": "tenhou-houou-ac369afb92f8",
     "title": "Tenhou Houou hand 183",
     "tags": [
       "flush/half-flush",
@@ -15152,15 +15876,18 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Yakuhai (round wind south)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: round wind south"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -15172,17 +15899,20 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "South triplet"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "White dragon pair (dragon)"
         },
         {
           "name": "Tsumo",
@@ -15193,7 +15923,7 @@
     }
   },
   {
-    "id": "tenhou-houou-ac87e1befc48",
+    "id": "tenhou-houou-4656d94e0ee1",
     "title": "Tenhou Houou hand 184",
     "tags": [
       "closed",
@@ -15244,19 +15974,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -15269,7 +16003,7 @@
     }
   },
   {
-    "id": "tenhou-houou-bfa5e2eb8b43",
+    "id": "tenhou-houou-48301e741f12",
     "title": "Tenhou Houou hand 185",
     "tags": [
       "dealer",
@@ -15339,15 +16073,18 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Yakuhai (chun)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: red dragon"
         },
         {
           "name": "Honitsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -15359,28 +16096,32 @@
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Red dragon triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "5-pin wait"
         },
         {
           "name": "Open triplet",
           "fu": 2,
-          "category": "group"
+          "category": "group",
+          "context": "7-pin triplet"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-41d415cc6a37",
+    "id": "tenhou-houou-4e4be3be2353",
     "title": "Tenhou Houou hand 186",
     "tags": [
       "closed",
@@ -15431,23 +16172,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -15460,7 +16206,7 @@
     }
   },
   {
-    "id": "tenhou-houou-1771c1647b12",
+    "id": "tenhou-houou-f817bec289cb",
     "title": "Tenhou Houou hand 187",
     "tags": [
       "closed",
@@ -15516,11 +16262,13 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -15537,23 +16285,26 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-pin wait"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Red dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-6537fddab695",
+    "id": "tenhou-houou-0cf8a96e4784",
     "title": "Tenhou Houou hand 188",
     "tags": [
       "closed",
@@ -15604,23 +16355,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Sanshoku Doujun",
-          "han": 2
+          "han": 2,
+          "englishName": "Mixed triple sequence"
         }
       ],
       "fuBreakdown": [
@@ -15633,7 +16389,7 @@
     }
   },
   {
-    "id": "tenhou-houou-2c65edc22ca4",
+    "id": "tenhou-houou-733188bfe051",
     "title": "Tenhou Houou hand 189",
     "tags": [
       "dora-heavy",
@@ -15690,11 +16446,13 @@
       "yaku": [
         {
           "name": "Yakuhai (hatsu)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: green dragon"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -15706,17 +16464,20 @@
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "6-pin triplet"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "Green dragon triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "2-sou wait"
         },
         {
           "name": "Tsumo",
@@ -15727,7 +16488,7 @@
     }
   },
   {
-    "id": "tenhou-houou-264ee3aeeea9",
+    "id": "tenhou-houou-0666b14a37f8",
     "title": "Tenhou Houou hand 190",
     "tags": [
       "closed",
@@ -15776,19 +16537,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Iipeiko",
-          "han": 1
+          "han": 1,
+          "englishName": "Pure double sequence"
         },
         {
           "name": "Ittsu",
-          "han": 2
+          "han": 2,
+          "englishName": "Full straight"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -15800,7 +16565,8 @@
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "5-pin wait"
         },
         {
           "name": "Tsumo",
@@ -15811,7 +16577,7 @@
     }
   },
   {
-    "id": "tenhou-houou-8e6c3529365d",
+    "id": "tenhou-houou-950dddccb527",
     "title": "Tenhou Houou hand 191",
     "tags": [
       "closed",
@@ -15864,19 +16630,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -15888,12 +16658,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-man wait"
         },
         {
           "name": "Tsumo",
@@ -15904,7 +16676,7 @@
     }
   },
   {
-    "id": "tenhou-houou-02123315c174",
+    "id": "tenhou-houou-6f6d03fef162",
     "title": "Tenhou Houou hand 192",
     "tags": [
       "closed",
@@ -15955,19 +16727,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -15980,7 +16756,7 @@
     }
   },
   {
-    "id": "tenhou-houou-936d251fcd35",
+    "id": "tenhou-houou-9a4cc6b5256d",
     "title": "Tenhou Houou hand 193",
     "tags": [
       "dora-heavy",
@@ -16046,11 +16822,13 @@
       "yaku": [
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "Dora",
-          "han": 3
+          "han": 3,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -16062,28 +16840,32 @@
         {
           "name": "Open terminal/honor kan",
           "fu": 16,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon kan"
         },
         {
           "name": "Open terminal/honor triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "1-man triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "7-man triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "7-sou wait"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-36e66a579b3f",
+    "id": "tenhou-houou-edfcab50bd23",
     "title": "Tenhou Houou hand 194",
     "tags": [
       "closed",
@@ -16134,23 +16916,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Sanshoku Doujun",
-          "han": 2
+          "han": 2,
+          "englishName": "Mixed triple sequence"
         }
       ],
       "fuBreakdown": [
@@ -16163,7 +16950,7 @@
     }
   },
   {
-    "id": "tenhou-houou-3b0911da778a",
+    "id": "tenhou-houou-dbb393532faf",
     "title": "Tenhou Houou hand 195",
     "tags": [
       "closed",
@@ -16216,19 +17003,23 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Yakuhai (haku)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: white dragon"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -16240,12 +17031,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "White dragon triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "3-sou wait"
         },
         {
           "name": "Tsumo",
@@ -16256,7 +17049,7 @@
     }
   },
   {
-    "id": "tenhou-houou-55a40291a228",
+    "id": "tenhou-houou-8592b1a758d6",
     "title": "Tenhou Houou hand 196",
     "tags": [
       "closed",
@@ -16307,15 +17100,18 @@
       "yaku": [
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Dora",
-          "han": 4
+          "han": 4,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -16333,7 +17129,7 @@
     }
   },
   {
-    "id": "tenhou-houou-8d40c666e007",
+    "id": "tenhou-houou-f7c71c4e4794",
     "title": "Tenhou Houou hand 197",
     "tags": [
       "closed",
@@ -16385,23 +17181,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Dora",
-          "han": 1
+          "han": 1,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -16414,7 +17215,7 @@
     }
   },
   {
-    "id": "tenhou-houou-7e2d79560a67",
+    "id": "tenhou-houou-fb28bbed6dc4",
     "title": "Tenhou Houou hand 198",
     "tags": [
       "closed",
@@ -16462,15 +17263,18 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Yakuhai (seat wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind east"
         },
         {
           "name": "Dora",
-          "han": 2
+          "han": 2,
+          "englishName": "Dora"
         }
       ],
       "fuBreakdown": [
@@ -16482,12 +17286,14 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Closed triplet",
           "fu": 4,
-          "category": "group"
+          "category": "group",
+          "context": "6-pin triplet"
         },
         {
           "name": "Tsumo",
@@ -16498,7 +17304,7 @@
     }
   },
   {
-    "id": "tenhou-houou-0728a6bc0f9b",
+    "id": "tenhou-houou-d0a17e2a781c",
     "title": "Tenhou Houou hand 199",
     "tags": [
       "closed",
@@ -16549,15 +17355,18 @@
       "yaku": [
         {
           "name": "Yakuhai (seat wind east)",
-          "han": 1
+          "han": 1,
+          "englishName": "Value honor: seat wind east"
         },
         {
           "name": "Chantai",
-          "han": 2
+          "han": 2,
+          "englishName": "Outside hand"
         },
         {
           "name": "Honitsu",
-          "han": 3
+          "han": 3,
+          "englishName": "Half flush"
         }
       ],
       "fuBreakdown": [
@@ -16574,28 +17383,32 @@
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "East triplet"
         },
         {
           "name": "Closed terminal/honor triplet",
           "fu": 8,
-          "category": "group"
+          "category": "group",
+          "context": "North triplet"
         },
         {
           "name": "Kanchan - Closed Wait",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "8-sou wait"
         },
         {
           "name": "Value pair",
           "fu": 2,
-          "category": "wait/pair"
+          "category": "wait/pair",
+          "context": "Red dragon pair (dragon)"
         }
       ]
     }
   },
   {
-    "id": "tenhou-houou-e7d1f808e47b",
+    "id": "tenhou-houou-4ed5377e5bf4",
     "title": "Tenhou Houou hand 200",
     "tags": [
       "closed",
@@ -16646,23 +17459,28 @@
       "yaku": [
         {
           "name": "Menzen Tsumo",
-          "han": 1
+          "han": 1,
+          "englishName": "Fully concealed self-draw"
         },
         {
           "name": "Riichi",
-          "han": 1
+          "han": 1,
+          "englishName": "Ready hand"
         },
         {
           "name": "Pinfu",
-          "han": 1
+          "han": 1,
+          "englishName": "All sequences"
         },
         {
           "name": "Tanyao",
-          "han": 1
+          "han": 1,
+          "englishName": "All simples"
         },
         {
           "name": "Sanshoku Doujun",
-          "han": 2
+          "han": 2,
+          "englishName": "Mixed triple sequence"
         }
       ],
       "fuBreakdown": [

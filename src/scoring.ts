@@ -88,6 +88,10 @@ function statusFor(active: boolean, ok: boolean): FieldStatus {
   return ok ? "correct" : "incorrect";
 }
 
+function isNonCountedYakuman(answer: Answer) {
+  return answer.limitTier === "yakuman" && answer.yaku.some((yaku) => yaku.han >= 13);
+}
+
 export function validateAnswer(
   inputs: AnswerInputs,
   problem: Problem,
@@ -98,6 +102,7 @@ export function validateAnswer(
   const expectedFuTotals = getFuTotals(answer);
   const expectedTsumoPayments = getExpectedTsumoPayments(answer.points);
   const splitFuConstituentsApply = !problem.tags.includes("fixed fu");
+  const validatesHanFu = !isNonCountedYakuman(answer);
   const statuses: Record<keyof AnswerInputs, FieldStatus> = {
     han: "idle",
     fu: "idle",
@@ -113,7 +118,7 @@ export function validateAnswer(
     tsumoDealerPoints: "idle",
   };
 
-  statuses.han = statusFor(enabled.han, numberMatches(inputs.han, answer.han));
+  statuses.han = statusFor(enabled.han && validatesHanFu, numberMatches(inputs.han, answer.han));
   statuses.dealer = statusFor(enabled.points && enabled.dealer, inputs.dealer === (problem.hand.seatWind === "east"));
   statuses.tsumo = statusFor(enabled.points && enabled.tsumo, inputs.tsumo === (problem.hand.winMethod === "tsumo"));
 
@@ -130,7 +135,7 @@ export function validateAnswer(
 
   statuses.limitTier = statusFor(enabled.points && enabled.limitTier, inputs.limitTier === answer.limitTier);
 
-  if (enabled.fu) {
+  if (enabled.fu && validatesHanFu) {
     if (fuInputMode === "total") {
       statuses.fu = statusFor(true, numberMatches(inputs.fu, answer.fu));
     } else {
