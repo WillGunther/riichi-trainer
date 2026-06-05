@@ -6,6 +6,7 @@ export type TileCode = SuitedTile | HonorTile;
 export type Wind = "east" | "south" | "west" | "north";
 export type WinMethod = "ron" | "tsumo";
 export type MeldType = "chi" | "pon" | "kan";
+export type RelativeSeat = "self" | "left" | "across" | "right";
 export type Meld = {
   type: MeldType;
   tiles: TileCode[];
@@ -41,53 +42,92 @@ export type HandState = {
   uraDoraIndicators?: TileCode[];
 };
 
-export type FutureContext = {
-  phase?: "draw" | "discard" | "win";
-  lastDrawSource?: "wall" | "deadWall";
-  lastDiscardBy?: "self" | "left" | "across" | "right";
-  kanOccurred?: boolean;
+export type BoardPhase = "draw" | "discard" | "call" | "win" | "exhaustiveDraw";
+export type DrawSource = "wall" | "deadWall";
+
+export type RiverTile = {
+  tile: TileCode;
+  calledBy?: RelativeSeat;
+  riichiDeclaration?: boolean;
+  tsumogiri?: boolean;
+};
+
+export type BoardPlayer = {
+  seat: Wind;
+  score: number;
+  handTiles?: TileCode[];
+  drawnTile?: TileCode;
+  discards: RiverTile[];
+  melds: Meld[];
+  riichi: boolean;
   riichiTurn?: number;
   doubleRiichi?: boolean;
-  ippatsu?: boolean;
-  haitei?: boolean;
-  houtei?: boolean;
   furiten?: boolean;
-  exhaustiveDraw?: boolean;
-  nagashiMangan?: boolean;
 };
 
-export type PlayerState = {
-  seat: Wind;
-  score?: number;
-  river?: TileCode[];
-  calledMelds?: Meld[];
+export type WinContext = {
+  winner: Wind;
+  winMethod: WinMethod;
+  winningTile: TileCode;
+  sourceSeat?: Wind;
+  drawSource?: DrawSource;
+  ippatsu: boolean;
+  rinshan: boolean;
+  chankan: boolean;
+  haitei: boolean;
+  houtei: boolean;
+  tenhou: boolean;
+  chiihou: boolean;
+  nagashiMangan: boolean;
 };
 
-export type TableState = {
-  players?: PlayerState[];
-  wallCount?: number;
-  deadWallReveals?: TileCode[];
-  rivers?: TileCode[][];
+export type BoardState = {
+  roundWind: Wind;
+  dealer: Wind;
+  turn: Wind;
+  phase: BoardPhase;
+  honba: number;
+  riichiSticks: number;
+  players: BoardPlayer[];
+  wallCount: number;
+  doraIndicators: TileCode[];
+  uraDoraIndicators: TileCode[];
+  deadWallReveals: TileCode[];
+  winContext?: WinContext;
 };
 
-export type Answer = {
-  han: number;
-  fu?: number;
-  points: string;
-  limitTier: LimitTier;
-  yaku: YakuBreakdown[];
-  fuBreakdown?: FuBreakdown[];
-};
-
-export type Problem = {
+export type ProblemMetadata = {
   id: string;
   title: string;
   tags: string[];
-  hand: HandState;
-  context?: FutureContext;
-  table?: TableState;
-  answer: Answer;
 };
+
+export type ScoringAnswer = {
+  han: number;
+  fu: number;
+  points: string;
+  limitTier: LimitTier;
+  yaku: YakuBreakdown[];
+  fuBreakdown: FuBreakdown[];
+};
+
+export type ScoringProblem = ProblemMetadata & {
+  hand: HandState;
+  answer: ScoringAnswer;
+};
+
+export type DiscardAnswer = {
+  discards: TileCode[];
+  explanation?: string;
+};
+
+export type DiscardProblem = ProblemMetadata & {
+  board: BoardState;
+  actingSeat: Wind;
+  answer: DiscardAnswer;
+};
+
+export type Problem = ScoringProblem | DiscardProblem;
 
 export type FuTotals = Record<FuCategory, number> & {
   preRound: number;

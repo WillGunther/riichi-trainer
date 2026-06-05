@@ -4,7 +4,7 @@ import { Info, Settings, X } from "lucide-react";
 import { problemCount, problems } from "./problems";
 import { getEmptyInputs, getFuTotals, type AnswerInputs, type EnabledInputs, type FuInputMode, validateAnswer, type ValidationResult } from "./scoring";
 import { Tile } from "./Tile";
-import type { FieldStatus, LimitTier, Problem, TileCode, Wind } from "./types";
+import type { FieldStatus, LimitTier, ScoringProblem, TileCode, Wind } from "./types";
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from "react";
 
 const limitTierLabels: Record<LimitTier, string> = {
@@ -539,7 +539,7 @@ function NumberInput({
   );
 }
 
-function HandDisplay({ problem, beginnerMode }: { problem: Problem; beginnerMode: boolean }) {
+function HandDisplay({ problem, beginnerMode }: { problem: ScoringProblem; beginnerMode: boolean }) {
   const hand = problem.hand;
   const concealedKanMelds = hand.melds.filter((meld) => meld.type === "kan" && !meld.open);
   const calledMelds = hand.melds.filter((meld) => meld.open);
@@ -675,7 +675,7 @@ function AnswerPanel({
   enabled: EnabledInputs;
   fuInputMode: FuInputMode;
   validation: ValidationResult | null;
-  problem: Problem;
+  problem: ScoringProblem;
   submitted: boolean;
   onSubmit: () => void;
   onNextProblem: () => void;
@@ -830,7 +830,7 @@ function Explanation({
   validation,
   showEnglishYakuNames,
 }: {
-  problem: Problem;
+  problem: ScoringProblem;
   validation: ValidationResult | null;
   showEnglishYakuNames: boolean;
 }) {
@@ -870,7 +870,7 @@ function Explanation({
         <div>
           <h3>Fu</h3>
           <ul className="breakdown-list">
-            {(answer.fuBreakdown ?? []).map((fu, index) => (
+            {answer.fuBreakdown.map((fu, index) => (
               <li key={`${fu.name}-${fu.fu}-${index}`}>
                 <span>{fu.fu} fu</span>
                 <strong>

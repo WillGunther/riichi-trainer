@@ -1,4 +1,4 @@
-import type { Answer, FieldStatus, FuCategory, FuTotals, LimitTier, Problem } from "./types";
+import type { FieldStatus, FuCategory, FuTotals, LimitTier, ScoringAnswer, ScoringProblem } from "./types";
 
 export type FuInputMode = "total" | "split";
 
@@ -41,15 +41,15 @@ const emptyCategoryTotals: Record<FuCategory, number> = {
   rounding: 0,
 };
 
-export function getFuTotals(answer: Answer): FuTotals {
+export function getFuTotals(answer: ScoringAnswer): FuTotals {
   const categoryTotals = { ...emptyCategoryTotals };
 
-  for (const item of answer.fuBreakdown ?? []) {
+  for (const item of answer.fuBreakdown) {
     categoryTotals[item.category] += item.fu;
   }
 
   const preRound = categoryTotals.base + categoryTotals.group + categoryTotals["wait/pair"] + categoryTotals["win method"];
-  const rounded = answer.fu ?? preRound + categoryTotals.rounding;
+  const rounded = answer.fu;
 
   return {
     ...categoryTotals,
@@ -79,8 +79,8 @@ function getExpectedTsumoPayments(points: string) {
   return null;
 }
 
-function numberMatches(input: string, expected: number | undefined) {
-  return expected !== undefined && Number(input) === expected;
+function numberMatches(input: string, expected: number) {
+  return Number(input) === expected;
 }
 
 function statusFor(active: boolean, ok: boolean): FieldStatus {
@@ -88,13 +88,13 @@ function statusFor(active: boolean, ok: boolean): FieldStatus {
   return ok ? "correct" : "incorrect";
 }
 
-function isNonCountedYakuman(answer: Answer) {
+function isNonCountedYakuman(answer: ScoringAnswer) {
   return answer.limitTier === "yakuman" && answer.yaku.some((yaku) => yaku.han >= 13);
 }
 
 export function validateAnswer(
   inputs: AnswerInputs,
-  problem: Problem,
+  problem: ScoringProblem,
   enabled: EnabledInputs,
   fuInputMode: FuInputMode,
 ): ValidationResult {

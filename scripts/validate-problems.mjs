@@ -44,6 +44,26 @@ function validateTiles(label, tiles) {
   }
 }
 
+function validateObjectKeys(label, value, requiredKeys, optionalKeys = []) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return;
+  }
+
+  const allowedKeys = new Set([...requiredKeys, ...optionalKeys]);
+
+  for (const key of requiredKeys) {
+    if (!(key in value)) {
+      errors.push(`${label}.${key} is required.`);
+    }
+  }
+
+  for (const key of Object.keys(value)) {
+    if (!allowedKeys.has(key)) {
+      errors.push(`${label}.${key} is not part of the generated problem schema.`);
+    }
+  }
+}
+
 for (const [index, problem] of problems.entries()) {
   const label = problem?.id ?? `problem[${index}]`;
 
@@ -51,6 +71,8 @@ for (const [index, problem] of problems.entries()) {
     errors.push(`${label} must be an object.`);
     continue;
   }
+
+  validateObjectKeys(label, problem, ["id", "title", "tags", "hand", "answer"]);
 
   if (typeof problem.id !== "string" || problem.id.length === 0) {
     errors.push(`${label}.id must be a non-empty string.`);
@@ -67,6 +89,13 @@ for (const [index, problem] of problems.entries()) {
   if (!problem.hand || typeof problem.hand !== "object") {
     errors.push(`${label}.hand must be an object.`);
   } else {
+    validateObjectKeys(
+      `${label}.hand`,
+      problem.hand,
+      ["concealedTiles", "melds", "winningTile", "seatWind", "roundWind", "winMethod", "riichi", "doraIndicators"],
+      ["uraDoraIndicators"],
+    );
+
     validateTiles(`${label}.hand.concealedTiles`, problem.hand.concealedTiles);
     validateTiles(`${label}.hand.doraIndicators`, problem.hand.doraIndicators);
 
@@ -99,6 +128,7 @@ for (const [index, problem] of problems.entries()) {
     } else {
       for (const [meldIndex, meld] of problem.hand.melds.entries()) {
         const meldLabel = `${label}.hand.melds[${meldIndex}]`;
+        validateObjectKeys(meldLabel, meld, ["type", "tiles", "open"], ["calledTile"]);
         if (!allowedMeldTypes.has(meld?.type)) {
           errors.push(`${meldLabel}.type is invalid.`);
         }
@@ -116,11 +146,13 @@ for (const [index, problem] of problems.entries()) {
   if (!problem.answer || typeof problem.answer !== "object") {
     errors.push(`${label}.answer must be an object.`);
   } else {
+    validateObjectKeys(`${label}.answer`, problem.answer, ["han", "fu", "points", "limitTier", "yaku", "fuBreakdown"]);
+
     if (!Number.isInteger(problem.answer.han) || problem.answer.han < 1) {
       errors.push(`${label}.answer.han must be a positive integer.`);
     }
 
-    if (problem.answer.fu !== undefined && (!Number.isInteger(problem.answer.fu) || problem.answer.fu < 20)) {
+    if (!Number.isInteger(problem.answer.fu) || problem.answer.fu < 20) {
       errors.push(`${label}.answer.fu must be an integer of at least 20.`);
     }
 
@@ -135,24 +167,24 @@ for (const [index, problem] of problems.entries()) {
     if (!Array.isArray(problem.answer.yaku) || problem.answer.yaku.length === 0) {
       errors.push(`${label}.answer.yaku must be a non-empty array.`);
     } else {
-      for (const yaku of problem.answer.yaku) {
+      for (const [yakuIndex, yaku] of problem.answer.yaku.entries()) {
+        validateObjectKeys(`${label}.answer.yaku[${yakuIndex}]`, yaku, ["name", "englishName", "han"]);
         if (typeof yaku?.name !== "string" || !Number.isInteger(yaku?.han) || typeof yaku?.englishName !== "string") {
           errors.push(`${label}.answer.yaku entries must have name, englishName, and integer han.`);
         }
       }
     }
 
-    if (problem.answer.fuBreakdown !== undefined) {
-      if (!Array.isArray(problem.answer.fuBreakdown)) {
-        errors.push(`${label}.answer.fuBreakdown must be an array.`);
-      } else {
-        for (const item of problem.answer.fuBreakdown) {
-          if (typeof item?.name !== "string" || !Number.isInteger(item?.fu) || !allowedFuCategories.has(item?.category)) {
-            errors.push(`${label}.answer.fuBreakdown entries must have name, integer fu, and category.`);
-          }
-          if (item?.context !== undefined && typeof item.context !== "string") {
-            errors.push(`${label}.answer.fuBreakdown context must be a string when present.`);
-          }
+    if (!Array.isArray(problem.answer.fuBreakdown)) {
+      errors.push(`${label}.answer.fuBreakdown must be an array.`);
+    } else {
+      for (const [fuIndex, item] of problem.answer.fuBreakdown.entries()) {
+        validateObjectKeys(`${label}.answer.fuBreakdown[${fuIndex}]`, item, ["name", "fu", "category"], ["context"]);
+        if (typeof item?.name !== "string" || !Number.isInteger(item?.fu) || !allowedFuCategories.has(item?.category)) {
+          errors.push(`${label}.answer.fuBreakdown entries must have name, integer fu, and category.`);
+        }
+        if (item?.context !== undefined && typeof item.context !== "string") {
+          errors.push(`${label}.answer.fuBreakdown context must be a string when present.`);
         }
       }
     }

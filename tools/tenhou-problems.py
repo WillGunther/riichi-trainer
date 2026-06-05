@@ -80,7 +80,7 @@ FuCategory = Literal["base", "group", "wait/pair", "win method", "rounding"]
 LimitTier = Literal["none", "mangan", "haneman", "baiman", "sanbaiman", "yakuman"]
 TileCode = str
 
-MODEL_CONFIG = ConfigDict(populate_by_name=True)
+MODEL_CONFIG = ConfigDict(populate_by_name=True, extra="forbid")
 
 
 YAKU_NAMES = [
@@ -152,7 +152,7 @@ class LogSource(BaseModel):
 class Candidate(BaseModel):
     model_config = ConfigDict(frozen=True)
 
-    problem: "ProblemModel"
+    problem: "ScoringProblemModel"
     tags: frozenset[str]
     source: str
 
@@ -194,7 +194,7 @@ class YakuBreakdownModel(BaseModel):
 
     name: str
     han: int
-    english_name: str | None = Field(default=None, alias="englishName")
+    english_name: str = Field(alias="englishName")
 
 
 class FuBreakdownModel(BaseModel):
@@ -210,17 +210,20 @@ class AnswerModel(BaseModel):
     model_config = MODEL_CONFIG
 
     han: int
-    fu: int | None = None
+    fu: int
     points: str
     limit_tier: LimitTier = Field(alias="limitTier")
     yaku: list[YakuBreakdownModel]
-    fu_breakdown: list[FuBreakdownModel] | None = Field(default=None, alias="fuBreakdown")
+    fu_breakdown: list[FuBreakdownModel] = Field(alias="fuBreakdown")
 
 
-class ProblemModel(BaseModel):
+class ProblemMetadataModel(BaseModel):
     id: str
     title: str
     tags: list[str]
+
+
+class ScoringProblemModel(ProblemMetadataModel):
     hand: HandModel
     answer: AnswerModel
 
@@ -234,7 +237,8 @@ for model in (
     YakuBreakdownModel,
     FuBreakdownModel,
     AnswerModel,
-    ProblemModel,
+    ProblemMetadataModel,
+    ScoringProblemModel,
 ):
     model.model_rebuild(_types_namespace=globals())
 
@@ -486,7 +490,7 @@ def candidate_from_agari(element: ET.Element, source: str, round_index: int, dea
     if answer is None or not tenhou_score_matches(attrs, answer):
         return None
 
-    problem = ProblemModel(id="", title="", tags=[], hand=hand, answer=answer)
+    problem = ScoringProblemModel(id="", title="", tags=[], hand=hand, answer=answer)
     tags = coverage_tags(problem)
     problem = problem.model_copy(update={"tags": sorted(tags)})
     return Candidate(problem=problem, tags=tags, source=f"{source}#agari-{sequence}")
@@ -745,7 +749,7 @@ def format_fu_name(name: str) -> str:
     return FU_NAME_LABELS.get(name, name.replace("_", " ").capitalize())
 
 
-def coverage_tags(problem: ProblemModel) -> frozenset[str]:
+def coverage_tags(problem: ScoringProblemModel) -> frozenset[str]:
     hand = problem.hand
     answer = problem.answer
     tags = {
